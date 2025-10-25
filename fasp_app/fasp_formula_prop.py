@@ -96,13 +96,13 @@ with st.sidebar.expander('Bandas'):
     # presupuesto estimado widget
     presupuesto = st.number_input(
         'Presupuesto estimado',
-        value=9_840_407_024.0, placeholder='Monto del fondo', key='Presupuesto estimado', format="%.2f", 
+        value=9_951_114_029.0, placeholder='Monto del fondo', key='Presupuesto estimado', format="%.2f", 
     )
     presupuesto_formateado = f"${presupuesto:,.2f}"
     # presupuesto estimado widget
     upper_limit = st.number_input(
         'Banda superior',
-        value=0.03, key='Limite superior',
+        value=0.05, key='Limite superior',
     )
     # presupuesto estimado widget
     lower_limit = st.number_input(
@@ -115,9 +115,9 @@ with st.sidebar.expander('Bandas'):
 # Sliders for weights
 with st.sidebar.expander('Características Estatales'):
     # Categoria 1: categorias estatales
-    w_pob = create_weight_input('Población (Alto=Bueno)', 0.075)
-    w_var_inc_del = create_weight_input('Var incidencia delictiva (Alto=Bueno)', 0.21)
-    w_base = create_weight_input('Monto base', 0.015)
+    w_pob = create_weight_input('Población (Alto=Bueno)', .3*.25)
+    w_var_inc_del = create_weight_input('Var incidencia delictiva (Alto=Bueno)', .3*.7)
+    w_base = create_weight_input('Monto base', .3*.05)
 
     caracteristicas_sum = (
         w_pob + w_var_inc_del + w_base
@@ -127,18 +127,18 @@ with st.sidebar.expander('Características Estatales'):
 
 with st.sidebar.expander('Desempeño Institucional'):
     # Categoria 2: desempeño institucional
-    w_tasa_policial = create_weight_input('Tasa policial (Alto=Bueno)', 0.045)
-    w_dig_salarial = create_weight_input('Dig salarial (Alto=Bueno)', 0.045)
-    w_profesionalizacion = create_weight_input('Profesionalización (Alto=Bueno)', 0.135)
-    w_ctrl_conf = create_weight_input('Ctrl confianza (Alto=Bueno)', 0.0225)
-    w_disp_camaras = create_weight_input('Disp cámaras (Alto=Bueno)', 0.078)
-    w_disp_lectores_veh = create_weight_input('Disp lectores veh. (Alto=Bueno)', 0.078)
-    w_abandono_llamadas = create_weight_input('Tasa abandono llamadas (Alto=Malo)', 0.045)
-    w_cump_presup = create_weight_input('Cump. presup. (Alto=Bueno)', 0.005)
-    w_sobrepob = create_weight_input('Sobrepob. penitenciaria (Alto=Malo)', 0.0381)
-    w_proc_justicia = create_weight_input('Proc justicia (Alto=Malo)', 0.0858)
-    w_servs_forenses = create_weight_input('Servs forenses (Alto=Bueno)', 0.0368)
-    w_eficiencia_procesal = create_weight_input('Eficiencia procesal (Alto=Bueno)', 0.0858)
+    w_tasa_policial = create_weight_input('Tasa policial (Alto=Bueno)', .45*.1)
+    w_dig_salarial = create_weight_input('Dig salarial (Alto=Bueno)', .45*.1)
+    w_profesionalizacion = create_weight_input('Profesionalización (Alto=Bueno)', .45*.3)
+    w_ctrl_conf = create_weight_input('Ctrl confianza (Alto=Bueno)', .45*.05)
+    w_disp_camaras = create_weight_input('Disp cámaras (Alto=Bueno)', .45*.175)
+    w_disp_lectores_veh = create_weight_input('Disp lectores veh. (Alto=Bueno)', .45*.175)
+    w_abandono_llamadas = create_weight_input('Tasa abandono llamadas (Alto=Malo)', .45*.1)
+    w_cump_presup = create_weight_input('Cump. presup. (Alto=Bueno)', .005)
+    w_sobrepob = create_weight_input('Sobrepob. penitenciaria (Alto=Malo)', .245*.15)
+    w_proc_justicia = create_weight_input('Proc justicia (Alto=Malo)', .245*.35)
+    w_servs_forenses = create_weight_input('Servs forenses (Alto=Bueno)', .245*.15)
+    w_eficiencia_procesal = create_weight_input('Eficiencia procesal (Alto=Bueno)', .245*.35)
 
     institucionales_sum = (
         w_tasa_policial + w_dig_salarial + w_profesionalizacion + w_ctrl_conf + w_disp_camaras +
