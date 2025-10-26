@@ -96,7 +96,7 @@ with st.sidebar.expander('Bandas'):
     # presupuesto estimado widget
     presupuesto = st.number_input(
         'Presupuesto estimado',
-        value=9_951_114_029.0, placeholder='Monto del fondo', key='Presupuesto estimado', format="%.2f", 
+        value=9_941_162_915.0, placeholder='Monto del fondo', key='Presupuesto estimado', format="%.2f", 
     )
     presupuesto_formateado = f"${presupuesto:,.2f}"
     # presupuesto estimado widget
