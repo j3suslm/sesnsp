@@ -84,7 +84,6 @@ st.markdown("""
 # sidebar image and text
 st.sidebar.image('images/sesnsp.png')
 
-
 # Function to create a weight slider/input
 def create_weight_input(label, default_value):
     return st.number_input(
@@ -97,57 +96,67 @@ with st.sidebar.expander('Bandas'):
     # presupuesto estimado widget
     presupuesto = st.number_input(
         'Presupuesto estimado',
-        value=9_840_407_024.0, placeholder='Monto del fondo', key='Presupuesto estimado', format="%.2f", 
+        value=9_941_162_915.0, placeholder='Monto del fondo', key='Presupuesto estimado', format="%.2f", 
     )
     presupuesto_formateado = f"${presupuesto:,.2f}"
     # presupuesto estimado widget
     upper_limit = st.number_input(
         'Banda superior',
-        value=0.1, key='Limite superior',
+        value=0.05, key='Limite superior',
     )
     # presupuesto estimado widget
     lower_limit = st.number_input(
         'Banda inferior',
-        value=0.1, key='Limite inferior',
+        value=0.08, key='Limite inferior',
     )
 
 
 
 # Sliders for weights
-with st.sidebar.expander('Ponderadores'):
+with st.sidebar.expander('Características Estatales'):
     # Categoria 1: categorias estatales
-    w_pob = create_weight_input('Población (Alto=Bueno)', 0.15) 
-    w_var_inc_del = create_weight_input('Var incidencia delictiva (Alto=Malo)', 0.09)
-    w_base = create_weight_input('Monto base', 0.06)
+    w_pob = create_weight_input('Población (Alto=Bueno)', .3*.25)
+    w_var_inc_del = create_weight_input('Var incidencia delictiva (Alto=Bueno)', .3*.7)
+    w_base = create_weight_input('Monto base', .3*.05)
 
-    # Categoria 2: desempeño institucional
-    w_tasa_policial = create_weight_input('Tasa policial (Alto=Bueno)', 0.09)
-    w_dig_salarial = create_weight_input('Dig salarial (Alto=Bueno)', 0.0675)
-    w_profesionalizacion = create_weight_input('Profesionalización (Alto=Bueno)', 0.0675)
-    w_ctrl_conf = create_weight_input('Ctrl confianza (Alto=Bueno)', 0.0563) 
-    w_disp_camaras = create_weight_input('Disp cámaras (Alto=Bueno)', 0.0563)
-    w_disp_lectores_veh = create_weight_input('Disp lectores veh. (Alto=Bueno)', 0.0563)
-    w_abandono_llamadas = create_weight_input('Tasa abandono llamadas (Alto=Malo)', 0.0563)
-    #w_abandono_089 = create_weight_input('Tasa abandono 089 (Alto=Malo)', 0.0563)
-    w_cump_presup = create_weight_input('Cump. presup. (Alto=Bueno)', 0.05)
-    w_sobrepob = create_weight_input('Sobrepob. penitenciaria (Alto=Malo)', 0.05)
-    w_proc_justicia = create_weight_input('Proc justicia (Alto=Malo)', 0.05)
-    w_servs_forenses = create_weight_input('Servs forenses (Alto=Bueno)', 0.05)
-    w_eficiencia_procesal = create_weight_input('Eficiencia procesal (Alto=Bueno)', 0.05)
-    
-
-    # Category 5: Gestión y Cumplimiento (Positive)
-    
-    # Total sum check and adjustment
-    total_sum = (
-        w_pob + w_tasa_policial + w_var_inc_del + w_disp_camaras + w_disp_lectores_veh +
-        w_abandono_llamadas + w_dig_salarial + w_profesionalizacion +
-        w_ctrl_conf + w_sobrepob + w_proc_justicia + w_servs_forenses + 
-        w_eficiencia_procesal + w_cump_presup + w_base
+    caracteristicas_sum = (
+        w_pob + w_var_inc_del + w_base
     )
-    
-    formatted_sum = f"{total_sum:.4f}"
-    st.markdown(f'**Suma:** {formatted_sum}')
+    formatted_caracteristicas = f"{caracteristicas_sum:.4f}"
+    st.markdown(f'**Suma:** {formatted_caracteristicas}')
+
+with st.sidebar.expander('Desempeño Institucional'):
+    # Categoria 2: desempeño institucional
+    w_tasa_policial = create_weight_input('Tasa policial (Alto=Bueno)', .45*.1)
+    w_dig_salarial = create_weight_input('Dig salarial (Alto=Bueno)', .45*.1)
+    w_profesionalizacion = create_weight_input('Profesionalización (Alto=Bueno)', .45*.3)
+    w_ctrl_conf = create_weight_input('Ctrl confianza (Alto=Bueno)', .45*.05)
+    w_disp_camaras = create_weight_input('Disp cámaras (Alto=Bueno)', .45*.175)
+    w_disp_lectores_veh = create_weight_input('Disp lectores veh. (Alto=Bueno)', .45*.175)
+    w_abandono_llamadas = create_weight_input('Tasa abandono llamadas (Alto=Malo)', .45*.1)
+    w_cump_presup = create_weight_input('Cump. presup. (Alto=Bueno)', .005)
+    w_sobrepob = create_weight_input('Sobrepob. penitenciaria (Alto=Malo)', .245*.15)
+    w_proc_justicia = create_weight_input('Proc justicia (Alto=Malo)', .245*.35)
+    w_servs_forenses = create_weight_input('Servs forenses (Alto=Bueno)', .245*.15)
+    w_eficiencia_procesal = create_weight_input('Eficiencia procesal (Alto=Bueno)', .245*.35)
+
+    institucionales_sum = (
+        w_tasa_policial + w_dig_salarial + w_profesionalizacion + w_ctrl_conf + w_disp_camaras +
+        w_disp_lectores_veh + w_abandono_llamadas + + w_cump_presup + w_sobrepob +
+        w_proc_justicia + w_servs_forenses + w_eficiencia_procesal
+    )
+    formatted_institucionales = f"{institucionales_sum:.4f}"
+    st.markdown(f'**Suma:** {formatted_institucionales}')
+
+# Total sum check and adjustment
+total_sum = (
+    w_pob + w_tasa_policial + w_var_inc_del + w_disp_camaras + w_disp_lectores_veh +
+    w_abandono_llamadas + w_dig_salarial + w_profesionalizacion +
+    w_ctrl_conf + w_sobrepob + w_proc_justicia + w_servs_forenses + 
+    w_eficiencia_procesal + w_cump_presup + w_base
+)
+formatted_sum = f"{total_sum:.4f}"
+st.sidebar.markdown(f'**Suma:** {formatted_sum}')
 
 
 # Store all weights in a dictionary
@@ -161,7 +170,6 @@ weights = {
     'Disp_camaras': w_disp_camaras,
     'Disp_lectores_veh': w_disp_lectores_veh,
     'Tasa_abandono_llamadas': w_abandono_llamadas,
-    #'Tasa_abandono_llamadas089': w_abandono_089,
     'Cump_presup': w_cump_presup,
     'Sobrepob_penitenciaria': w_sobrepob,
     'Proc_justicia': w_proc_justicia,
@@ -171,7 +179,6 @@ weights = {
 }
 
 
-# upload final variables dataset
 # widget para subir archivos
 uploaded_file = st.file_uploader("", type=['csv'], )
 
@@ -180,9 +187,13 @@ if uploaded_file is None:
 else:
     data = pd.read_csv(io.BytesIO(uploaded_file.getvalue()))    
 
-    # --- UPDATED INDICADORES_FOFISP TABLE ---
+    # --- UPDATED INDICADORES ---
     # Create a structure for the new 15 indicators (placeholders)
-    indicadores_fasp = pd.read_csv('fasp_indicadores.csv')
+    try:
+        indicadores_fasp = pd.read_csv('fasp_indicadores.csv')
+    except FileNotFoundError:
+        st.error("Archivo 'fasp_indicadores.csv' no encontrado.")
+        st.stop()
     
     # Format GT table (rest of the GT configuration is the same)
     indicadores = (
@@ -230,8 +241,8 @@ else:
         st.subheader('1. Introducción')
         st.markdown('''
         <div style="text-align: justify;">
-        A continuación se enlistan los indicadores subyacentes para la asignación del <b>Fondo para el Fortalecimiento
-        de las Instituciones de Seguridad Pública</b> (FOFISP) <b>2026</b>.
+        A continuación se enlistan los indicadores subyacentes para la asignación del <b>Fondo de Aportaciones para la 
+        Seguridad Pública</b> (FASP) <b>2026</b>.
         </div>''',
          unsafe_allow_html=True)
 
@@ -244,7 +255,7 @@ else:
 
         st.markdown('''
         <div style="text-align: justify;">
-        Esta aplicación interactiva sirve como una herramienta de análisis de escenarios que utiliza un <i>Índice de Asignación de Seguridad Pública Normalizado</i>.
+        Esta aplicación interactiva sirve como una herramienta de análisis de escenarios que utiliza un <i>Índice de Asignación de Proporciones Directas</i>.
         
         El corazón de la aplicación es la ponderación.
         Al usar los controles deslizantes en la barra lateral, se pueden simular diferentes prioridades de política pública.
@@ -259,7 +270,7 @@ else:
         st.markdown('''
         ##### Referencias
 
-        [Fondo para el Fortalecimiento de las Instituciones de Seguridad Pública (FOFISP) 2025](https://www.gob.mx/sesnsp/acciones-y-programas/fondo-para-el-fortalecimiento-de-las-instituciones-de-seguridad-publica-fofisp?state=published)
+        [Fondo de Aportaciones para la Seguridad Pública (FASP) 2025](https://www.gob.mx/sesnsp/acciones-y-programas/fondo-de-aportaciones-para-la-seguridad-publica-fasp)
         
         ---
 
@@ -276,80 +287,124 @@ else:
         st.subheader("2.1 Datos de Entrada")
 
         
-        # --- Funciones de Cálculo del Índice (UPDATED FOR 15 VARIABLES) ---
-        def min_max_normalize(series, direction='positive'):
+        # --- Funciones de Cálculo del Índice proporcion directa (aplicando shift=mean(x)+stdev(x) al invertir alto=malo) ---
+        def direct_proportion_normalize(series, direction='positive'):
             """
-            Normaliza una serie de datos entre 0 y 1 usando el método Min-Max.
-            Si la dirección es 'negativa', se invierte (Alto = Malo se convierte en Alto = Bueno).
+            Normaliza una serie de datos usando el método de Proporción Directa (Normalización a la Suma).
+            Implementa un 'shift' para asegurar que todos los valores sean no negativos.
+            
+            - Si la dirección es 'positive' (Alto=Bueno), usa Proporción Directa.
+            - Si la dirección es 'negative' (Alto=Malo), usa una Proporción Inversa Suavizada 
+            (penalizando valores altos) basada en la fórmula R/(R+X) donde R es la media + std.
             """
+            
+            # Asegurar que el input es una Serie de Pandas
+            if not isinstance(series, pd.Series):
+                series = pd.Series(series)
+
+            # 1. SHIFTING: Asegurar que el valor mínimo de la serie sea 0 o positivo.
             min_val = series.min()
-            max_val = series.max()
-
-            if max_val == min_val:
-                return pd.Series(0.5, index=series.index) # Retorna 0.5 si todos los valores son iguales
-
-            if direction == 'positive':
-                # (X - Min) / (Max - Min) -> Un valor más alto resulta en una puntuación más alta
-                return (series - min_val) / (max_val - min_val)
-            elif direction == 'negative':
-                # (Max - X) / (Max - Min) -> Un valor más bajo (mejor) resulta en una puntuación más alta
-                return (max_val - series) / (max_val - min_val)
+            
+            # Shift para que el mínimo sea exactamente 0 (si era negativo)
+            if min_val < 0:
+                # Sumar el valor absoluto del mínimo a toda la serie.
+                shifted_series = series - min_val 
             else:
-                raise ValueError("La dirección debe ser 'positiva' o 'negativa'")
+                # No se necesita shift si el mínimo es 0 o positivo.
+                shifted_series = series
+            
+            # --- Lógica de Normalización ---
+            
+            if direction == 'positive':
+                # Alto=Bueno (Proporción Directa Estándar)
+                total_sum = shifted_series.sum()
+                
+                if total_sum == 0:
+                    # Caso extremo: si todos los valores son cero después del shift.
+                    return pd.Series(1.0 / len(shifted_series), index=shifted_series.index)
+                
+                return shifted_series / total_sum
+            
+            elif direction == 'negative':
+                
+                # Alto=Malo: Proporción Inversa Suavizada (penalizando valores altos)
+                
+                # 1. Definir la constante R como el punto de referencia para la inversión suave.
+                # R = Media + Desviación Estándar (evita el efecto extremo de la inversa 1/X)
+                R = series.mean() + series.std()*3
 
-        def calculate_index(df, weights):
-            """Calcula el Índice Compuesto Normalizado para las 15 variables."""
+                # Manejo del caso extremo R=0
+                if R == 0:
+                    # Si todos los valores de la serie shiftada son cero (o idénticos, resultando en std=0)
+                    # Asignar distribución equitativa.
+                    return pd.Series(1.0 / len(series), index=series.index)
 
-            # 1. Normalización de Variables
-            # Positive variables (Higher value = Better/Higher score)
-            df['Pob_norm'] = min_max_normalize(df['Pob'], direction='positive')
-            df['Tasa_policial_norm'] = min_max_normalize(df['Tasa_policial'], direction='positive')
-            df['Profesionalizacion_norm'] = min_max_normalize(df['Profesionalizacion'], direction='positive')
-            df['Ctrl_conf_norm'] = min_max_normalize(df['Ctrl_conf'], direction='positive')
-            df['Disp_camaras_norm'] = min_max_normalize(df['Disp_camaras'], direction='positive')
-            df['Disp_lectores_veh_norm'] = min_max_normalize(df['Disp_lectores_veh'], direction='positive')
-            df['Cump_presup_norm'] = min_max_normalize(df['Cump_presup'], direction='positive')
-            df['Proc_justicia_norm'] = min_max_normalize(df['Proc_justicia'], direction='negative')
-            df['Servs_forenses_norm'] = min_max_normalize(df['Servs_forenses'], direction='positive')
-            df['Eficiencia_procesal_norm'] = min_max_normalize(df['Eficiencia_procesal'], direction='positive')
+                # 2. Aplicar la función de penalización: R / (R + X)
+                # Un valor grande (Alto=Malo) dará un resultado penalizado (cercano a 0).
+                penalized_series = R + series
+                
+                # 3. Normalizar la serie penalizada a la suma (Proporción Directa)
+                total_sum_penalized = penalized_series.sum()
+                
+                if total_sum_penalized == 0:
+                    # Si, por alguna razón, la suma es 0 después de la penalización (muy improbable con R>0)
+                    return pd.Series(1.0 / len(series), index=series.index)
+                    
+                return penalized_series / total_sum_penalized
+                
 
-            # Negative variables (Lower value = Better/Higher score, so we invert)
-            df['Var_inc_del_norm'] = min_max_normalize(df['Var_inc_del'], direction='negative')
-            df['Dig_salarial_norm'] = min_max_normalize(df['Dig_salarial'], direction='positive')
-            df['Tasa_abandono_llamadas_norm'] = min_max_normalize(df['Tasa_abandono_llamadas'], direction='negative')
-            #df['Tasa_abandono_llamadas089_norm'] = min_max_normalize(df['Tasa_abandono_llamadas089'], direction='negative')
-            df['Sobrepob_penitenciaria_norm'] = min_max_normalize(df['Sobrepob_penitenciaria'], direction='negative')
+        def calculate_index(df, weights, presupuesto):
+            """
+            Calcula la Asignación de Fondo Ponderada (Reparto Directo) y la contribución monetaria por variable.
+            """
+            
+            # 1. Fondo restante a repartir por variables (94% del fondo)
+            #w_remaining_fund_percent = 1 - weights['Monto base']
+            #w_remaining_fund = presupuesto * w_remaining_fund_percent
+            
+            # Diccionario para almacenar las contribuciones monetarias de cada variable
+            contributions = {}
 
-            # 2. Aplicación de Ponderadores
-            df['Indice Normalizado'] = (
-                df['Pob_norm'] * weights['Pob'] +
-                df['Tasa_policial_norm'] * weights['Tasa_policial'] +
-                df['Var_inc_del_norm'] * weights['Var_inc_del'] +
-                df['Dig_salarial_norm'] * weights['Dig_salarial'] +
-                df['Profesionalizacion_norm'] * weights['Profesionalizacion'] +
-                df['Ctrl_conf_norm'] * weights['Ctrl_conf'] +
-                df['Disp_camaras_norm'] * weights['Disp_camaras'] +
-                df['Disp_lectores_veh_norm'] * weights['Disp_lectores_veh'] +
-                df['Tasa_abandono_llamadas_norm'] * weights['Tasa_abandono_llamadas'] +
-                #df['Tasa_abandono_llamadas089_norm'] * weights['Tasa_abandono_llamadas089'] +
-                df['Cump_presup_norm'] * weights['Cump_presup'] +
-                df['Sobrepob_penitenciaria_norm'] * weights['Sobrepob_penitenciaria'] +
-                df['Proc_justicia_norm'] * weights['Proc_justicia'] +
-                df['Servs_forenses_norm'] * weights['Servs_forenses'] +
-                df['Eficiencia_procesal_norm'] * weights['Eficiencia_procesal']
-                # add monto base weight
-                + presupuesto * w_base
-            )
+            # --- Definiciones de Normalización y Cálculo de Monto (94% del fondo) ---    
+            # Mapping of variable names to their properties
+            variable_map = {
+                'Pob': 'positive', 'Tasa_policial': 'positive', 'Profesionalizacion': 'positive', 
+                'Ctrl_conf': 'positive', 'Disp_camaras': 'positive', 'Disp_lectores_veh': 'positive',
+                'Cump_presup': 'positive', 'Servs_forenses': 'positive', 'Eficiencia_procesal': 'positive',
+                'Var_inc_del': 'positive', 'Dig_salarial': 'positive', 
+                'Tasa_abandono_llamadas': 'negative', 'Sobrepob_penitenciaria': 'negative', 
+                'Proc_justicia': 'negative'
+            }
 
-            # The final index is also normalized to a 0-1 range for comparability
-            df['Indice Final (0-1)'] = min_max_normalize(df['Indice Normalizado'], direction='positive')
-            # small enough not to alter allocation
-            epsilon = 0.01
-            # Apply Epsilon correction to prevent zero shares
-            df['Indice Final (Corrimiento)'] = (df['Indice Final (0-1)'] * (1 - epsilon)) + epsilon
+            for var_name, direction in variable_map.items():
+                # 1. Normalización
+                df[f'{var_name}_prop'] = direct_proportion_normalize(df[var_name], direction=direction)
+                
+                # 2. Cálculo de la Contribución Monetaria Ponderada
+                # (Proporción * Peso de la variable * Fondo restante)
+                contribution_col_name = f'Monto_{var_name}'
+                contributions[contribution_col_name] = df[f'{var_name}_prop'] * weights[var_name] * presupuesto
 
-            return df
+            # --- Cálculo del Monto Base (6% del fondo) ---
+            w_base_amount = presupuesto * weights['Monto base']
+            base_share = w_base_amount / len(df)
+            
+            # sumamos el monto base constante para cada fila
+            contributions['Monto_Base'] = pd.Series(base_share, index=df.index) 
 
+            # --- 3. Cálculo de la Asignación Bruta y Reparto Final ---
+            # Sumar todas las contribuciones. (Esto incluye las 14 Series de variables + la Serie de Monto Base)
+            # Al ser todas Series, la suma es vectorial (fila por fila).
+            df['Asignacion_Bruta'] = sum(contributions.values())
+            
+            # Combinar todas las contribuciones (Monto_X) con el DF principal
+            df = pd.concat([df, pd.DataFrame(contributions)], axis=1)
+            
+            # Para el resto del código (remanente) se necesita una columna que sume 1.00 y represente el reparto:
+            df['Reparto'] = df['Asignacion_Bruta'] / df['Asignacion_Bruta'].sum()
+            
+            return df            
+        
         
         # Adjust data for display
         fasp_datos_entrada = data.copy()
@@ -371,8 +426,7 @@ else:
                     'Ctrl_conf':'{:.2f}',
                     'Disp_camaras':'{:.2f}%',
                     'Disp_lectores_veh':'{:.2f}%',
-                    'Tasa_abandono_llamadas9':'{:.2f}%',
-                    #'Tasa_abandono_llamadas089':'{:.2f}%',
+                    'Tasa_abandono_llamadas':'{:.2f}%',
                     'Cump_presup':'{:.2f}%',
                     'Sobrepob_penitenciaria':'{:.2f}%',
                     'Proc_justicia':'{:.2f}%',
@@ -386,22 +440,17 @@ else:
         st.caption('Tabla 2. Variables utilizadas en el modelo para la asignación de fondos.')
 
 
-                # --- Cálculo y Visualización ---
-        # Calcular el índice
-        df_results = calculate_index(fasp_datos_entrada, weights)
+        # --- Cálculo y Visualización ---
+        # Calcular la asignación
+        df_results = calculate_index(fasp_datos_entrada, weights, presupuesto)
         
+
         # Mostrar la tabla final de resultados
         st.subheader("2.2 Resultados")
-        # reckon end allocated amount
-        # sum final index
-        total_indice = df_results['Indice Final (Corrimiento)'].sum()
-        # create share weights
-        df_results['Reparto'] = df_results['Indice Final (Corrimiento)'] / total_indice
-        # Var%funds
-        df_results['Asignacion_2026'] = df_results['Reparto'] * presupuesto
-        # validate allocated budget
-        #st.dataframe(df_results[['Asignacion_2026']].sum()) 
-
+        
+        # El reparto ya está en la columna 'Asignacion_Bruta' (sin bandas)
+        df_results['Asignacion_2026'] = df_results['Asignacion_Bruta']
+        
         # create diff amount and percentage
         df_results['Var%'] = df_results['Asignacion_2026'] / df_results['Asignacion_2025'] -1
 
@@ -414,6 +463,8 @@ else:
                         'Var%': '{:.2%}',
                         })
         )
+
+        st.dataframe(df_end)
 
         # Gráfico de barras de asignacion de fondos (Simplified Title)
         fig = px.bar(
@@ -543,11 +594,10 @@ else:
 
         st.subheader('2.3 Rebalanceo de remanente')
         st.markdown('''
-        Se estableció una banda de $\pm$10% para el importe asignado 2026 en relación al asignado 2025.
-        
+        Se estableció una banda de control para el importe asignado 2026 en relación al asignado 2025.   
         A continuación, podemos observar la aplicación de estas bandas a las Entidades Federativas en la asignación 2026.
         ''')
-
+        
         # Define the tolerance level
         # Calculate Allocation Band (Min and Max)
         df_results['Min'] = df_results['Asignacion_2025'] * (1 - lower_limit)
@@ -611,10 +661,10 @@ else:
         )
 
         st.dataframe(df_bandas, hide_index=True)
-        st.caption('Tabla 3. Entidades Federativas por encima/debajo de la banda de $\pm$10%')
+        st.caption('Tabla 3. Entidades Federativas por encima/debajo de la banda de control')
 
         st.markdown('''
-        En la siguiente tabla, se resume el superavit y deficit totales, respecto a la banda de 10% y el remanente a repartir.
+        En la siguiente tabla, se resume el superavit y deficit totales, respecto a la banda de control y el remanente a repartir.
         ''')
 
         
@@ -634,10 +684,18 @@ else:
         df_results['Elegibles'] = np.where(df_results['Reasignacion'] < df_results['Max'],
                                             1,
                                             0)
-        total_basis = df_results['Elegibles'].sum()
+        # Use the raw assignment proportion as the basis for reallocation
+        # The sum of 'Reparto' is already 1.00, so it's a valid basis for a new share.
+        df_results['Base_Reparto'] = df_results['Reparto']
+
+        total_basis_share = df_results.loc[df_results['Elegibles'] == 1, 'Base_Reparto'].sum()
+        
         # 2. Calculate the proportional share of the net fund
-        if total_basis > 0:
-            df_results['Reparto_neto'] = (df_results['Elegibles'] / total_basis) * remanente
+        if total_basis_share > 0:
+            # Repartir el remanente usando la base de reparto original, solo entre elegibles
+            df_results['Reparto_neto'] = np.where(df_results['Elegibles'] == 1, 
+                                                (df_results['Base_Reparto'] / total_basis_share) * remanente,
+                                                0)
         else:
             df_results['Reparto_neto'] = 0
 
@@ -670,7 +728,7 @@ else:
         st.dataframe(df_reasignacion2, hide_index=True)
         # validar que la suma de reasignacion ajustada sea igual al presupuesto inicial 2026
         #st.dataframe(pd.Series(df_results['Asignacion_ajustada'].sum()))
-        st.caption('Tabla 5. Reasignación de Remanente por Entidad Federativa con banda de $\pm$10%')
+        st.caption('Tabla 5. Reasignación de Remanente por Entidad Federativa con banda de control')
 
         st.dataframe(df_results[['Asignacion_ajustada']].sum(), width=200, hide_index=True,
             column_config={
@@ -708,7 +766,7 @@ else:
 
         fig2.update_layout(
             barmode='group',
-            title=f"Reasignación de Fondos por Entidad Federativa después de Remanente de la banda de $\pm$10%",
+            title=f"Reasignación de Fondos por Entidad Federativa después de Remanente de la banda de control",
             template='ggplot2',
             uniformtext_minsize=8, uniformtext_mode='hide',
             hovermode="x unified",
@@ -742,102 +800,70 @@ else:
         st.plotly_chart(fig2, use_container_width=True)
 
         
+
+        # --- NUEVA TABLA: Contribución Monetaria por Variable ---
+        st.subheader("2.4 Contribución Monetaria por Indicador")
+        st.markdown(f'''
+            La siguiente tabla desglosa la contribución monetaria de cada uno de los 15 indicadores
+            a la asignación bruta (sin rebalanceo) del **Fondo Estimado de {presupuesto_formateado}**.
+        ''')
+
+        contribution_cols = [f'Monto_{col}' for col in weights.keys() if col != 'Monto base'] + ['Monto_Base']
+
+        # DataFrame for display
+        df_contributions = df_results[['Entidad_Federativa'] + contribution_cols].copy()
+        
+        # Add the 'Total Bruto' for verification
+        df_contributions['Asignacion Bruta'] = df_results['Asignacion_Bruta']
+        
+        # Prepare the DataFrame for display formatting
+        st.dataframe(
+            df_contributions.style.format({col: '${:,.2f}' for col in contribution_cols + ['Asignacion Bruta']}),
+            hide_index=True,
+            use_container_width=True
+        )
+        st.caption('Tabla 6. Contribución monetaria de cada indicador a la asignación bruta por Entidad Federativa.')
+
         st.markdown('---')
         st.markdown('*© Dirección General de Planeación*')
 
 
     with tab3:
-        st.header('3. Nota metodológica')
-        st.markdown("""
-        1. **Normalización:** Todos los indicadores se escalan al rango [0, 1].
-        2. **Agregación:** Se aplica la suma ponderada de las variables normalizadas.
-        3. **Corrimiento estadístico:** Se suma un valor epsilon para evitar coeficientes nulos.
-        4. **Repartición:** Se reparte el presupuesto entre las Entidades Federativas según el valor de las ponderaciones de los indicadores.
-        """)
+        st.markdown('## 3. Nota metodológica')
 
-        st.subheader('3.1 Normalización')
-        st.latex(r'''
-        V_{i,j} = \frac{X_{i,j} - X_{i, \min}}{X_{i, \max} - X_{i, \min}}\\
-        \text{ }\\
-        \text{donde:}\\
-        \text{ }\\
-        V_{i,j} = \text{Valor normalizado del indicador i para la Entidad Federativa j}\\
-        X_{i,j} = \text{Indicador i de la Entidad Federativa j}\\
-        ''')
-        st.markdown('`Inversión: Las variables negativas se invierten para que una tasa baja resulte en un valor normalizado alto (cercano a 1).`')
+        st.markdown('''    
+        #### 1. Estandarización de Variables (Proporciones)
+
+        Primero, calculamos la proporción que representa cada estado en cada variable:
+
+        - Proporción de Población (Pi​):
         
-        st.subheader('3.2 Agregación del Índice')
-        st.latex(r'''
-        I_j = \sum_{i=1}^{n}( V_{i,j} \times W_i)\\
-        \text{ }\\
-        \text{donde:}\\
-        \text{ }\\
-        I_j = \text{Índice de asignación de fondos para la Entidad Federativa j}\\
-        V_{i,j} = \text{Valor normalizado del indicador i para la Entidad Federativa j}\\
-        W_i = \text{Ponderación del indicador i}\\
-        ''')
-        st.markdown('`Re-escalado: El índice final se re-escala [0, 1] para facilitar la interpretación del rendimiento relativo.`')
+            `Pi​ = Población del Estado i​ / Población Total`
 
-        st.subheader('3.3 Corrimiento Estadístico')
-        st.markdown('''
-        La fórmula opera sobre el índice normalizado (con rango [0,1]) usando una constante pequeña y positiva, $\epsilon$.
-
-        ##### 3.3.1  Compresión del Rango: (indice_normalizado * (1−$\epsilon$))
-
-        **Objetivo: Comprimir el rango de los valores normalizados.**
-
-        - Multiplicar por un factor ligeramente menor que 1, como (1−0.0001)=0.9999.
-        - El rango original [0,1] se convierte en [0,1−$\epsilon$].
-        - El valor mínimo (0) se mantiene en 0×(1−$\epsilon$)=0.
-        - El valor máximo (1) se reduce a 1×(1−$\epsilon$)=1−$\epsilon$.
+        - Proporción de Delitos (Di​):
         
-        ##### 3.3.2 Corrimiento hacia arriba (Shift): +$\epsilon$
+            `Di ​= Delitos del Estado i​ / Total de Delitos`
 
-        **Objetivo: Desplazar todo el conjunto de datos hacia arriba por la cantidad $\epsilon$.**
+        #### 2. Cálculo del Factor de Asignación Ponderado
 
-        Se suma $\epsilon$ al resultado del paso anterior.
+        Luego, combina estas dos proporciones para cada estado (i) usando las ponderaciones (WP​=0.60 y WD​=0.40).
 
-        - El mínimo, que era 0, ahora es 0+$\epsilon$=$\epsilon$.
-        - El máximo, que era 1−$\epsilon$, ahora es (1−$\epsilon$)+$\epsilon$=1.
+        - Factor Ponderado (Fi​):
         
+            `Fi ​= (Pi​*0.60)+(Di​*0.40)`
+
+        El resultado Fi​ es el porcentaje total del fondo que le corresponde al Estado i. 
         
-        |Indice normalizado|Transformación|Valor Final|
-        |:---:|:---:|:---:|
-        |0 (mínimo)|(0 * (1−$\epsilon$)) + $\epsilon$|$\epsilon$|
-        |1 (máximo)|(1 * (1−$\epsilon$)) + $\epsilon$|1|
+        `Nota: La suma de todos los Fi​ para todos los estados debe ser igual a 1.00 (100%).`
 
-        ''')
+        #### 3. Asignación Final del Fondo
 
-        st.subheader('3.4 Repartición del Presupuesto')
-        st.markdown('''
-        Se calcula la participación porcentual de cada Entidad Federativa en el índice total
-        y se distribuye el fondo total entre cada una de acuerdo a su participación porcentual.
-        ''')
+        Finalmente, multiplica el Factor Ponderado por el Fondo Total (FT):
+
+        - Asignación al Estado i:
         
-        st.subheader('3.5 Repartición del Remanente')
-        st.markdown('''
-        <div style="text-align: justify;">
-        Se aplican bandas del $\pm$10% respecto al importe asignado del ejercicio anterior inmediato y se obtiene 
-        el total de importe sobrante y faltante aplicando estas bandas.
-        Posteriormente, se reparte este remanente entre las diversas Entidades Federativas para que ninguna rebase
-        las bandas del $\pm$10%.
-        </div>''',
-        unsafe_allow_html=True)
-
-        st.markdown('---')
-        st.markdown('*© Dirección General de Planeación*')
-
-        # Inject custom CSS to left-align KaTeX elements
-        st.markdown(
-            """
-            <style>
-            .katex-html {
-                text-align: left;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+            `A_i​ = Fi * FT`
+    ''')
 
     with tab4:
 
@@ -849,7 +875,7 @@ else:
         Por otra parte, se anexa hoja de cálculo en formato xlsx (Excel) con el desarrollo mencionado.
         """)
 
-        st.dataframe(df_results)
+        st.dataframe(df_results, use_container_width=True)
 
         st.markdown("[Hoja de cálculo](https://sspcgob-my.sharepoint.com/:x:/g/personal/oscar_avila_sspc_gob_mx/ESy9dnRh6AdJgNEwSx5-udMBcKgLhTP29mnxWhgDvYF6WA?e=l1O8Xl)")
         
