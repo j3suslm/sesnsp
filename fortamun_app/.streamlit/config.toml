@@ -4,4 +4,4 @@ primaryColor = '#691c32'
 backgroundColor = '#fff'
 textColor = '#525252'
 font="Noto Sans"
-codeBackgroundColor="#f8f8f8" # change background code color
+codeBackgroundColor="#f8f8f8"
