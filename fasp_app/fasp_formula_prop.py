@@ -116,7 +116,7 @@ with st.sidebar.expander('Bandas'):
 with st.sidebar.expander('Características Estatales'):
     # Categoria 1: categorias estatales
     w_pob = create_weight_input('Población (Alto=Bueno)', .3*.25)
-    w_var_inc_del = create_weight_input('Var incidencia delictiva (Alto=Bueno)', .3*.7)
+    w_var_inc_del = create_weight_input('Incidencia delictiva (Alto=Bueno)', .3*.7)
     w_base = create_weight_input('Monto base', .3*.05)
 
     caracteristicas_sum = (
@@ -162,7 +162,7 @@ st.sidebar.markdown(f'**Suma:** {formatted_sum}')
 # Store all weights in a dictionary
 weights = {
     'Pob': w_pob,
-    'Var_inc_del': w_var_inc_del,
+    'Inc_del': w_var_inc_del,
     'Tasa_policial': w_tasa_policial,
     'Dig_salarial': w_dig_salarial,
     'Profesionalizacion': w_profesionalizacion,
@@ -303,12 +303,14 @@ else:
                 series = pd.Series(series)
 
             # 1. SHIFTING: Asegurar que el valor mínimo de la serie sea 0 o positivo.
+            R = series.mean() + series.std()*3
+
             min_val = series.min()
             
             # Shift para que el mínimo sea exactamente 0 (si era negativo)
             if min_val < 0:
-                # Sumar el valor absoluto del mínimo a toda la serie.
-                shifted_series = series - min_val 
+                # Corrimiento de prom + stdev.
+                shifted_series = series + R 
             else:
                 # No se necesita shift si el mínimo es 0 o positivo.
                 shifted_series = series
@@ -328,27 +330,15 @@ else:
             elif direction == 'negative':
                 
                 # Alto=Malo: Proporción Inversa Suavizada (penalizando valores altos)
-                
-                # 1. Definir la constante R como el punto de referencia para la inversión suave.
-                # R = Media + Desviación Estándar (evita el efecto extremo de la inversa 1/X)
-                R = series.mean() + series.std()*3
-
-                # Manejo del caso extremo R=0
-                if R == 0:
-                    # Si todos los valores de la serie shiftada son cero (o idénticos, resultando en std=0)
-                    # Asignar distribución equitativa.
-                    return pd.Series(1.0 / len(series), index=series.index)
-
-                # 2. Aplicar la función de penalización: R / (R + X)
                 # Un valor grande (Alto=Malo) dará un resultado penalizado (cercano a 0).
-                penalized_series = R + series
+                penalized_series = 1 / shifted_series
                 
                 # 3. Normalizar la serie penalizada a la suma (Proporción Directa)
                 total_sum_penalized = penalized_series.sum()
                 
                 if total_sum_penalized == 0:
                     # Si, por alguna razón, la suma es 0 después de la penalización (muy improbable con R>0)
-                    return pd.Series(1.0 / len(series), index=series.index)
+                    return pd.Series(1.0 / len(shifted_series), index=shifted_series.index)
                     
                 return penalized_series / total_sum_penalized
                 
@@ -371,8 +361,8 @@ else:
                 'Pob': 'positive', 'Tasa_policial': 'positive', 'Profesionalizacion': 'positive', 
                 'Ctrl_conf': 'positive', 'Disp_camaras': 'positive', 'Disp_lectores_veh': 'positive',
                 'Cump_presup': 'positive', 'Servs_forenses': 'positive', 'Eficiencia_procesal': 'positive',
-                'Var_inc_del': 'positive', 'Dig_salarial': 'positive', 
-                'Tasa_abandono_llamadas': 'negative', 'Sobrepob_penitenciaria': 'negative', 
+                'Inc_del': 'positive', 'Dig_salarial': 'positive', 
+                'Tasa_abandono_llamadas': 'negative', 'Sobrepob_penitenciaria': 'positive', 
                 'Proc_justicia': 'negative'
             }
 
@@ -410,16 +400,16 @@ else:
         fasp_datos_entrada = data.copy()
         data.index = pd.RangeIndex(start=1, stop=len(data)+1, step=1)
         # Apply formatting to relevant columns
-        data[['Var_inc_del','Dig_salarial','Disp_camaras','Disp_lectores_veh','Tasa_abandono_llamadas',
+        data[['Inc_del','Dig_salarial','Disp_camaras','Disp_lectores_veh','Tasa_abandono_llamadas',
             'Cump_presup','Sobrepob_penitenciaria','Proc_justicia','Servs_forenses','Eficiencia_procesal',]] = (
-        data[['Var_inc_del','Dig_salarial','Disp_camaras','Disp_lectores_veh','Tasa_abandono_llamadas',
+        data[['Inc_del','Dig_salarial','Disp_camaras','Disp_lectores_veh','Tasa_abandono_llamadas',
             'Cump_presup','Sobrepob_penitenciaria','Proc_justicia','Servs_forenses','Eficiencia_procesal',]]*100
         )
         fasp_datos_entrada2 = (
             data.rename(columns={'Entidad': 'Entidad_Federativa'})
                 .style.format({
                     'Pob': '{:,.0f}',
-                    'Var_inc_del':'{:.2f}%',
+                    'Inc_del':'{:.2f}%',
                     'Tasa_policial':'{:.2f}',
                     'Dig_salarial':'{:.2f}%',
                     'Profesionalizacion':'{:.0f}',
