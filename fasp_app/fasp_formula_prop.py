@@ -1199,12 +1199,12 @@ else:
         st.markdown("""
         En este apartado, se muestra la sábana de datos con todos las fases del cálculo de asignación de fondos,
         incluyendo las bandas y reasignación del remanente.
-
-        Por otra parte, se anexa hoja de cálculo (Excel) con el procedimiento aplicado para la asignación final.
         """)
 
         st.dataframe(df_results, use_container_width=True)
 
+        st.markdown('Por otra parte, se anexa hoja de cálculo (Excel) con el procedimiento aplicado para la asignación final.')
+        
         st.markdown("[Hoja de cálculo](https://sspcgob-my.sharepoint.com/:x:/g/personal/jesus_lopez_sspc_gob_mx/EVMYdkSmoR5FqM3VSG85RBEBCE3Lk4JFgfWOXZG2EuwS6Q?e=AOY1iJ)")
         
         st.markdown('---')
