@@ -200,19 +200,23 @@ else:
         GT(indicadores_fasp)
         .tab_stub()
         .tab_header(
-            title=md('Fondo para las Aportaciones de Seguridad Pública'),
+            title=md('Fondo para las Aportaciones de Seguridad Pública (FASP)'),
             subtitle=md('## Indicadores de Distribución')
             )
-        .fmt_percent(columns=['Ponderación_categoría','Ponderación_indicador'], decimals=1).sub_zero(zero_text=md(''))
+        .fmt_percent(columns=['Ponderación_categoría','Ponderación_subcategoría','Ponderación_indicador'], decimals=1).sub_zero(zero_text=md(''))
         .cols_width(cases={
-                "Categoría": "26%",
-                "Ponderación_categoría": "22%",
-                "Indicador": "30%",
-                "Ponderación_indicador": "22%",
+                "Categoría": "20%",
+                "Ponderación_categoría": "20%",
+                "Subcategoría": "30%",
+                "Indicador": "60%",
+                "Ponderación_subcategoría": "20%",
+                "Ponderación_indicador": "20%",
                 })
         .cols_label(
             Categoría = md('**Categoría**'),
+            Subcategoría = md('**Subcategoría**'),
             Ponderación_categoría = md('**Ponderación categoría**'),
+            Ponderación_subcategoría = md('**Ponderación subcategoría**'),
             Indicador = md('**Indicador**'),
             Ponderación_indicador = md('**Ponderación indicador**'),
         )
@@ -233,46 +237,139 @@ else:
     
 
     # tab layout
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(['1.Introducción', '2.Cálculo', '3.Nota metodológica', '4.Nota técnica', '5.Reporte ejecutivo'])
+    tab1, tab2, tab3, tab4 = st.tabs(['1.Reporte Ejecutivo','2.Cálculo de Asignación','3.Nota metodológica','4.Nota técnica',])
 
 
     with tab1:
 
         # header
-        st.subheader('1. Introducción')
+        st.subheader('Indicadores Utilizados para la Asignación')
         st.markdown('''
         <div style="text-align: justify;">
-        A continuación se enlistan los indicadores subyacentes para la asignación del <b>Fondo de Aportaciones para la 
-        Seguridad Pública</b> (FASP) <b>2026</b>.
+        
+        El **Fondo de Aportaciones para la Seguridad Pública** (FASP) es un fondo presupuestal previsto en
+        la *Ley de Coordinación Fiscal* a través del cual se transfieren recursos a las entidades federativas
+        para dar cumplimiento a estrategias nacionales en materia de seguridad pública.
+        
+        En la siguiente tabla, se listan los indicadores utilizados para la asignación de este fondo.
+        
         </div>''',
          unsafe_allow_html=True)
 
         st.html(indicadores)
         st.caption('Tabla 1. Indicadores utilizados para la asignación de fondos y ponderaciones predeterminadas.')
-
-        st.markdown('''
-        ##### ¿Cómo funciona esta aplicación?
-        ''')
+        st.markdown('Para mayor información sobre el fondo, vísite la página [Fondo de Aportaciones para la Seguridad Pública (FASP) 2025](https://www.gob.mx/sesnsp/acciones-y-programas/fondo-de-aportaciones-para-la-seguridad-publica-fasp)')
 
         st.markdown('''
         <div style="text-align: justify;">
-        Esta aplicación interactiva sirve como una herramienta de análisis de escenarios que utiliza un <i>Índice de Asignación de Proporciones Directas</i>.
+                
+        ### ¿Cómo funciona esta aplicación?
         
-        El corazón de la aplicación es la ponderación.
-        Al usar los controles deslizantes en la barra lateral, se pueden simular diferentes prioridades de política pública.
+        #### 1. Objetivo de la Aplicación
         
-        Al ajustar estas ponderaciones, la aplicación recalcula el índice en tiempo real, permitiéndo ver cómo los
-        supuestos de ponderación impactan la clasificación final de las Entidades Federativas.
-        Esto proporciona una base objetiva para discutir y justificar las decisiones de asignación de fondos,
-        asegurando que los recursos se dirijan donde son más necesarios o donde generarán el mayor impacto.
+        Esta aplicación interactiva sirve como una herramienta de análisis de escenarios diseñada para simular la asignación de los recursos del **Fondo
+        de Aportaciones para la Seguridad Pública (FASP)**.
+        
+        Su propósito es permitir a los tomadores de decisiones visualizar cómo diferentes prioridades de política pública —*expresadas a través de la asignación
+        de ponderadores*— impactan directamente en la cantidad de fondos que recibe cada Entidad Federativa.
+        
+        Esta herramienta permite destacar las siguientes características:
+        
+        - **Transparencia**
+        
+            La lógica de asignación es visible y ajustable.
+        
+        - **Justificación**
+        
+            Las decisiones sobre la distribución de fondos se pueden respaldar con datos y escenarios explícitos.
+        
+        - **Facilidad de uso**
+        
+            El resultado final se recalcula automáticamente con cada ajuste hecho en la barra lateral.
+        
+
+        #### 2. El Corazón del cálculo
+        
+        - **El Índice Ponderado**
+        
+            La aplicación utiliza un sistema llamado Índice de Proporciones Directas Ponderadas para determinar el reparto de la mayor parte del presupuesto
+        (el 94% restante, después de restar el monto base).
+        
+        - **Variables**
+        
+            Se utilizan 15 variables de desempeño y características estatales (Tasa Policial, Población, Incidencia Delictiva, etc).
+        
+        - **Normalización (La Medida de Necesidad)**
+        
+            Para cada variable, el desempeño de un estado se compara con el desempeño de todos los demás estados.
+        
+        - **Variables "Buenas" (Alto = Más fondos)**
+        
+            Si un estado tiene un alto nivel en una variable deseada (ej. Más Servicios Forenses), recibe una proporción mayor de los fondos de esa variable.
+        
+        - **Variables "Malas" (Alto = Menos fondos)**
+        
+            Si un estado tiene un alto nivel en una variable no deseada (ej. Más Sobrepoblación Penitenciaria), el modelo castiga ese valor, dándole una
+        proporción menor de los fondos de esa variable.
+        
+        - **Ponderación (Prioridad)**
+        
+            Cada una de estas 15 variables tiene un "peso" asignado en la barra lateral (sliders).
+            Este peso es su herramienta de política pública. 
+            Si le da un peso de 0.50 a la Población, esa variable determinará la mitad del resultado.
+            Si le da un peso de 0.01 a la Tasa Policial, esa variable tendrá un impacto marginal en el resultado.
+        
+        
+        - **Asignación Inicial**
+        
+            El monto de la asignación inicial de cada estado es la suma de todas sus proporciones (la 'medida de necesidad') multiplicadas por los pesos
+        definidos ('prioridades').
+        
+        #### 3. El Rebalanceo
+        
+        - **Aplicación de Bandas de Control**
+        
+            Una vez que el modelo calcula la asignación inicial (Asignación 2026 Inicial), esta debe pasar por un proceso de ajuste para cumplir con las
+        Bandas de Control preestablecidas:
+        
+        - **Banda Superior**
+        
+            Es el porcentaje máximo en que la asignación de un estado puede crecer respecto al año anterior (2025).
+            (Ej. Si se establece en 10%, ningún estado puede recibir más de un 10% adicional).
+        
+        - **Banda Inferior**
+        
+            Es el porcentaje mínimo en que la asignación de un estado puede crecer o decrecer respecto al año anterior (2025).
+            (Ej. Si se establece en 0%, ningún estado puede recibir menos que el monto asignado en 2025).
+        
+        - **El Proceso Iterativo**
+        
+            La Asignación Inicial puede provocar que algunos estados queden por encima de la banda superior o por debajo de la banda inferior.
+            Para corregir esto, la aplicación ejecuta un ciclo iterativo de reasignación:
+        
+        - **Superávit y Déficit**
+        
+            El sistema identifica los fondos excedentes de los estados que superaron el límite superior (supéravit) y los fondos faltantes para los
+        estados que cayeron por debajo del límite inferior (déficit).
+        
+        - **Fondo Remanente**
+        
+            Los fondos excedentes se reúnen en un fondo común y, en primer lugar, se usan para cubrir los déficits.
+            Lo que queda se llama remanente neto.
+        
+        - **Redistribución Continua**
+        
+            El remanente neto se reparte proporcionalmente entre sólo aquellos estados que no han sido "topados" por el límite superior.
+        
+        - **Repetición**
+        
+            Este proceso de topado, recolección y redistribución se repite automáticamente (*iteración*) hasta que el remanente por repartir es insignificante.
+            Este método asegura que el monto total del Fondo no se altere, y que absolutamente todos los estados cumplan con los límites de variación definidos
+        en la barra lateral, resultando en la Asignación 2026 Final Ajustada.
         </div>''',
         unsafe_allow_html=True)
         
         st.markdown('''
-        ##### Referencias
-
-        [Fondo de Aportaciones para la Seguridad Pública (FASP) 2025](https://www.gob.mx/sesnsp/acciones-y-programas/fondo-de-aportaciones-para-la-seguridad-publica-fasp)
-        
         ---
 
         *© Dirección General de Planeación*
@@ -282,12 +379,11 @@ else:
     with tab2:
         #st.header('2. Cálculo de Asignación')
         st.markdown(f'''
-            ## 2. Escenarios de Asignación
+            ## Escenarios de Asignación
             #### Fondo: *{presupuesto_formateado}*
         ''')
-        st.subheader("2.1 Datos de Entrada")
+        st.subheader("Datos de Entrada")
 
-        
         # --- Funciones de Cálculo del Índice proporcion directa (aplicando shift=mean(x)+stdev(x) al invertir alto=malo) ---
         def direct_proportion_normalize(series, direction='positive'):
             """
@@ -436,7 +532,7 @@ else:
         
 
         # Mostrar la tabla final de resultados
-        st.subheader("2.2 Resultados Iniciales (sin bandas)")
+        st.subheader("Resultados Iniciales (sin bandas)")
         
         # El reparto ya está en la columna 'Asignacion_Bruta' (sin bandas)
         df_results['Asignacion_2026'] = df_results['Asignacion_Bruta']
@@ -459,7 +555,7 @@ else:
 
 
         # --- Start of the iterative rebalance logic ---
-        st.subheader('2.3 Rebalanceo de remanente (Iterativo)')
+        st.subheader('Rebalanceo de remanente (*iteración*)')
         st.markdown(f'''
         Se estableció una banda de control de **{lower_limit:.0%}** (inferior) y **{upper_limit:.0%}** (superior) para el importe asignado 2026 en relación
         al asignado 2025.
@@ -589,8 +685,8 @@ else:
 
         st.markdown('#### Asignación Ajustada Final')
         st.dataframe(df_reasignacion2, hide_index=True, width=750)
-#
-#
+        st.caption('Tabla 4. asignación ajustada final dentro de la banda especificada.')
+        #
         #
         ### Gráfico de barras de asignacion de fondos (Simplified Title)
         #fig = px.bar(
@@ -955,7 +1051,7 @@ else:
 
 
         # --- 2.5 Visualización de Asignación Ajustada Final ---
-        st.subheader('2.5 Comparativa de Asignaciones')
+        st.subheader('Comparativo de Asignaciones')
         st.markdown('''
         En la siguiente gráfica se observa la diferencia entre el monto de referencia (2025), el monto inicial calculado por el modelo (2026 Inicial) y el monto final ajustado por las bandas de control (2026 Final Ajustada).
         ''')
@@ -1000,7 +1096,10 @@ else:
                 'Entidad_Federativa': 'Entidad Federativa',
                 'Monto': 'Monto Asignado',
                 'Tipo_Asignacion': 'Tipo de Asignación'
-            }
+            },
+            hover_data={
+                'Monto':':,.2f',
+                },
         )
 
         # 5. Configuración de Trazas y Layout
@@ -1014,7 +1113,8 @@ else:
         )
 
         fig_final.update_layout(
-            uniformtext_minsize=8, uniformtext_mode='hide',
+            uniformtext_minsize=8, 
+            uniformtext_mode='hide',
             hovermode="x unified",
             autosize=True,
             height=700,
@@ -1024,7 +1124,7 @@ else:
             legend=dict(
                 orientation="h",
                 yanchor="bottom",
-                y=1.02,
+                y=.99,
                 xanchor="right",
                 x=1
             )
@@ -1032,14 +1132,18 @@ else:
 
         fig_final.update_xaxes(
             showgrid=True,
-            tickangle=-45,
-            tickfont=dict(size=12),
+            tickangle=-60,
+            title_font=dict(size=16, family='Noto Sans', color='#28282b'),
+            tickfont=dict(size=14, family='Noto Sans', color='#4f4f4f'),
         )
 
         fig_final.update_yaxes(
             tickprefix="$",
             tickformat=',.0f',
             showgrid=True,
+            title_font=dict(size=16, family='Noto Sans', color='#28282b'),
+            tickfont=dict(size=14, family='Noto Sans', color='#4f4f4f'),
+            tickangle=0,
         )
 
         st.plotly_chart(fig_final, use_container_width=True)
@@ -1052,7 +1156,7 @@ else:
         
 
     with tab3:
-        st.markdown('## 3. Nota metodológica')
+        st.header('Procedimiento para la Asignacion del Fondo')
 
         st.markdown('''    
         #### 1. Estandarización de Variables (Proporciones)
@@ -1091,129 +1195,17 @@ else:
 
     with tab4:
 
-        st.header('4. Nota técnica')
+        st.header('Sábana de Datos')
         st.markdown("""
         En este apartado, se muestra la sábana de datos con todos las fases del cálculo de asignación de fondos,
         incluyendo las bandas y reasignación del remanente.
 
-        Por otra parte, se anexa hoja de cálculo en formato xlsx (Excel) con el desarrollo mencionado.
+        Por otra parte, se anexa hoja de cálculo (Excel) con el procedimiento aplicado para la asignación final.
         """)
 
         st.dataframe(df_results, use_container_width=True)
 
         st.markdown("[Hoja de cálculo](https://sspcgob-my.sharepoint.com/:x:/g/personal/jesus_lopez_sspc_gob_mx/EVMYdkSmoR5FqM3VSG85RBEBCE3Lk4JFgfWOXZG2EuwS6Q?e=AOY1iJ)")
         
-        st.markdown('---')
-        st.markdown('*© Dirección General de Planeación*')
-
-
-    with tab5:
-        st.header('Reporte Ejecutivo')
-        st.markdown('''
-        ### Entendiendo la Herramienta de Asignación
-        
-        #### 1. Objetivo de la Aplicación
-        
-        Esta aplicación interactiva sirve como una herramienta de análisis de escenarios diseñada para simular la asignación de los recursos del **Fondo
-        de Aportaciones para la Seguridad Pública (FASP)**.
-        
-        Su propósito es permitir a los tomadores de decisiones visualizar cómo diferentes prioridades de política pública —*expresadas a través de la asignación
-        de ponderadores*— impactan directamente en la cantidad de fondos que recibe cada Entidad Federativa.
-        
-        Esta herramienta permite destacar las siguientes características:
-        
-        - **Transparencia**
-        
-            La lógica de asignación es visible y ajustable.
-        
-        - **Justificación**
-        
-            Las decisiones sobre la distribución de fondos se pueden respaldar con datos y escenarios explícitos.
-        
-        - **Facilidad de uso**
-        
-            El resultado final se recalcula automáticamente con cada ajuste hecho en la barra lateral.
-        
-
-        #### 2. El Corazón del cálculo
-        
-        - **El Índice Ponderado**
-        
-            La aplicación utiliza un sistema llamado Índice de Proporciones Directas Ponderadas para determinar el reparto de la mayor parte del presupuesto
-        (el 94% restante, después de restar el monto base).
-        
-        - **Variables**
-        
-            Se utilizan 15 variables de desempeño y características estatales (Tasa Policial, Población, Incidencia Delictiva, etc).
-        
-        - **Normalización (La Medida de Necesidad)**
-        
-            Para cada variable, el desempeño de un estado se compara con el desempeño de todos los demás estados.
-        
-        - **Variables "Buenas" (Alto = Más fondos)**
-        
-            Si un estado tiene un alto nivel en una variable deseada (ej. Más Servicios Forenses), recibe una proporción mayor de los fondos de esa variable.
-        
-        - **Variables "Malas" (Alto = Menos fondos)**
-        
-            Si un estado tiene un alto nivel en una variable no deseada (ej. Más Sobrepoblación Penitenciaria), el modelo castiga ese valor, dándole una
-        proporción menor de los fondos de esa variable.
-        
-        - **Ponderación (Prioridad)**
-        
-            Cada una de estas 15 variables tiene un "peso" asignado en la barra lateral (sliders).
-            Este peso es su herramienta de política pública. 
-            Si le da un peso de 0.50 a la Población, esa variable determinará la mitad del resultado.
-            Si le da un peso de 0.01 a la Tasa Policial, esa variable tendrá un impacto marginal en el resultado.
-        
-        
-        - **Asignación Inicial**
-        
-            El monto de la asignación inicial de cada estado es la suma de todas sus proporciones (la 'medida de necesidad') multiplicadas por los pesos
-        definidos ('prioridades').
-        
-        #### 3. El Rebalanceo
-        
-        - **Aplicación de Bandas de Control**
-        
-            Una vez que el modelo calcula la asignación inicial (Asignación 2026 Inicial), esta debe pasar por un proceso de ajuste para cumplir con las
-        Bandas de Control preestablecidas:
-        
-        - **Banda Superior**
-        
-            Es el porcentaje máximo en que la asignación de un estado puede crecer respecto al año anterior (2025).
-            (Ej. Si se establece en 10%, ningún estado puede recibir más de un 10% adicional).
-        
-        - **Banda Inferior**
-        
-            Es el porcentaje mínimo en que la asignación de un estado puede crecer o decrecer respecto al año anterior (2025).
-            (Ej. Si se establece en 0%, ningún estado puede recibir menos que el monto asignado en 2025).
-        
-        - **El Proceso Iterativo**
-        
-            La Asignación Inicial puede provocar que algunos estados queden por encima de la banda superior o por debajo de la banda inferior.
-            Para corregir esto, la aplicación ejecuta un ciclo iterativo de reasignación:
-        
-        - **Superávit y Déficit**
-        
-            El sistema identifica los fondos excedentes de los estados que superaron el límite superior (supéravit) y los fondos faltantes para los
-        estados que cayeron por debajo del límite inferior (déficit).
-        
-        - **Fondo Remanente**
-        
-            Los fondos excedentes se reúnen en un fondo común y, en primer lugar, se usan para cubrir los déficits.
-            Lo que queda se llama remanente neto.
-        
-        - **Redistribución Continua**
-        
-            El remanente neto se reparte proporcionalmente entre sólo aquellos estados que no han sido "topados" por el límite superior.
-        
-        - **Repetición**
-        
-            Este proceso de topado, recolección y redistribución se repite automáticamente (*iteración*) hasta que el remanente por repartir es insignificante.
-            Este método asegura que el monto total del Fondo no se altere, y que absolutamente todos los estados cumplan con los límites de variación definidos
-        en la barra lateral, resultando en la Asignación 2026 Final Ajustada.
-        ''')
-
         st.markdown('---')
         st.markdown('*© Dirección General de Planeación*')
