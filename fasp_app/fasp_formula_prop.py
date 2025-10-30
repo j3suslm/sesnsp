@@ -993,7 +993,7 @@ else:
             color='Tipo_Asignacion',
             barmode='group',
             text='Monto',
-            title=f"Comparativa de Asignaciones de Fondos (Fondo Estimado: {presupuesto_formateado})",
+            title=f"Comparativo de Asignaciones de Fondos (Bandas [{lower_limit:.0%}, +{upper_limit:.0%}])",
             template='ggplot2',
             color_discrete_map=color_map,
             labels={
@@ -1019,7 +1019,7 @@ else:
             autosize=True,
             height=700,
             xaxis_title='',
-            yaxis_title='Monto Asignado (MXN)',
+            yaxis_title='Monto asignado',
             legend_title='Tipo de Monto',
             legend=dict(
                 orientation="h",
@@ -1044,8 +1044,8 @@ else:
 
         st.plotly_chart(fig_final, use_container_width=True)
 
-        st.caption(f'''Figura 3. Comparativa de la Asignación 2025 (referencia), la Asignación 2026 Inicial (sin bandas) y
-        la Asignación 2026 Final Ajustada (dentro de la banda [{lower_limit:.0%}, +{upper_limit:.0%}]).''')
+        st.caption('''Figura 1. Comparativo de la Asignación 2025 (referencia), la Asignación 2026 Inicial (sin bandas) y
+        la Asignación 2026 Final Ajustada.''')
 
         st.markdown('---')
         st.markdown('*© Dirección General de Planeación*')
