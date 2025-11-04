@@ -54,7 +54,7 @@ def main():
 
     # If password is not correct, ask for it
     if not st.session_state.password_correct:
-        password_guess = st.text_input('¡Escribe el password para acceder!')
+        password_guess = st.text_input('¡Escribe el password para acceder!', type="password")
         
         if password_guess == password:
             st.session_state.password_correct = True
