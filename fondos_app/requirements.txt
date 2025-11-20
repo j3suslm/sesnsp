@@ -1,0 +1,9 @@
+streamlit
+numpy
+pandas
+polars
+fastexcel
+pillow
+python-dotenv
+plotly
+great-tables

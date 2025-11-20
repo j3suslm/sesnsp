@@ -1,0 +1,7 @@
+[theme] # You have to add this line
+
+primaryColor = '#691c32'
+backgroundColor = '#fff'
+textColor = '#28282b'
+font="Noto Sans"
+codeBackgroundColor="#f8f8f8"
