@@ -1,0 +1,16 @@
+.title-block h1 {
+  text-align: justify;
+}
+
+.subtitle {
+  color: #bc955c;
+  font-size: 30px;
+}
+
+h2, h3, h4 {
+  color: #bc955c;
+}
+
+p {
+  text-align: justify;
+}

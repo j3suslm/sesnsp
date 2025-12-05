@@ -1,0 +1,18 @@
+---
+title: "Artículos"
+lang: es
+fontsize: 12pt
+backgroundcolor: "#ffff"
+footnotes-hover: false
+theme: styles.scss
+---
+
+En este apartado, compartimos artículos diversos de interés general sobre Seguridad Pública.
+
+* México Evalúa (2024). [La Otra Militarización](la_otra_militarizacion.pdf)
+
+<br>
+
+## Videos
+
+{{< video https://www.youtube.com/watch?v=wBqzRsruVVg width="400" height="250" >}}

@@ -1,0 +1,237 @@
+---
+title: Asignación del Fondo FASP
+subtitle: Ejercicio 2026
+title-slide-attributes:
+  data-background-image: "slides-1.png"
+  data-background-size: cover
+  data-background-opacity: "0.9"
+date: 2025-10-30
+date-format: MMM, YYYY
+lang: en
+format:
+  revealjs:
+    view-distance: 10
+    auto-stretch: false
+    embed-resources: true
+    slide-number: c/t
+    footer: © Dirección General de Planeación
+    transition: fade
+    transition-speed: slow
+    theme: custom.scss
+    fig-cap-location: bottom
+execute:
+  echo: false
+jupyter: python3
+image: "sspc-sesnsp-small.png"
+categories: [Estudios]
+---
+
+
+## Reporte Ejecutivo {background-image="slides-2.png"}
+<!---  slide 1 --->
+<br>
+
+### Indicadores utilizados
+
+El **Fondo de Aportaciones para la Seguridad Pública** (FASP) es un fondo presupuestal previsto en
+la *Ley de Coordinación Fiscal* a través del cual se transfieren recursos a las entidades federativas
+para dar cumplimiento a estrategias nacionales en materia de seguridad pública.
+        
+En la siguiente tabla, se listan los indicadores utilizados para la asignación de este fondo.
+
+
+<!---  slide 2 --->
+## {background-image="slides-2.png"}
+
+![](indicadores.png){.absolute top=40 left=100 height=87%}
+
+
+<!---  slide 3 --->
+## ¿Cómo funciona esta app? {background-image="slides-2.png"}
+
+<br>
+
+#### 1. Objetivo
+        
+Esta aplicación interactiva sirve como una herramienta de análisis de escenarios diseñada para simular la asignación de los recursos del **Fondo de Aportaciones para la Seguridad Pública**.
+        
+Su propósito es permitir a los tomadores de decisiones visualizar cómo diferentes prioridades de política pública —*expresadas a través de la asignación de ponderadores*— impactan directamente en la cantidad de fondos que recibe cada Entidad Federativa.
+        
+Esta herramienta permite destacar las siguientes características:
+        
+- **Transparencia**
+        
+La lógica de asignación es visible y ajustable.
+        
+- **Justificación**
+        
+Las decisiones sobre la distribución de fondos se pueden respaldar con datos y escenarios explícitos.
+        
+- **Facilidad de uso**
+        
+El resultado final se recalcula automáticamente con cada ajuste hecho en la barra de ponderadores.
+
+
+<!---  slide 4 --->
+## {.smaller background-image="slides-2.png"}
+
+<br>
+
+#### 2. La fórmula
+
+- **Índice ponderado**
+        
+La aplicación utiliza un sistema llamado `Índice de Proporciones Directas Ponderadas` para determinar el reparto de la mayor parte del presupuesto (*el 94% restante, después de restar el monto base*).
+        
+- **Variables**
+        
+Se utilizan 15 variables de desempeño y características estatales.
+        
+- **Normalización (Medida de necesidad)**
+        
+Para cada variable, el desempeño de un Estado se compara con el desempeño de los demás.
+
+- **Variables "Buenas" (Alto = Más fondos)**
+        
+Si un Estado tiene un alto nivel en una variable deseada (*ej. más Servicios Forenses*), recibe una proporción mayor de los fondos de esa variable.
+
+
+<!---  slide 5 --->
+## {background-image="slides-2.png"}
+
+<br>
+        
+- **Variables "Malas" (Alto = Menos fondos)**
+        
+Si un Estado tiene un alto nivel en una variable no deseada (*ej. más Sobrepoblación Penitenciaria*), el modelo castiga ese valor, dándole una proporción menor de los fondos de esa variable.
+        
+- **Ponderación (Prioridad)**
+        
+Cada una de estas 15 variables tiene un "peso" asignado en la barra lateral (`sliders`).
+Este peso es su herramienta de política pública. 
+Si le da un peso de 0.50 a la Población, esa variable determinará la mitad del resultado.
+Si le da un peso de 0.01 a la Tasa Policial, esa variable tendrá un impacto marginal en el resultado.
+
+- **Asignación inicial**
+        
+El monto de la asignación inicial de cada Estado es la suma de todas sus proporciones (`medida de necesidad`) multiplicadas por los pesos definidos (`prioridades`).
+
+
+<!---  slide 6 --->
+## {background-image="slides-2.png"}
+
+<br>
+
+#### 3. El rebalanceo
+        
+- **Bandas de control**
+        
+Una vez que el modelo calcula la asignación inicial (Asignación 2026 inicial), ésta deberá pasar por un proceso de ajuste para cumplir con las bandas de control preestablecidas.
+        
+- **Banda superior**
+        
+Es el porcentaje máximo en que la asignación de un Estado puede crecer respecto al año anterior (2025).
+(Ej. Si se establece en 10%, ningún Estado puede recibir más de un 10% adicional).
+        
+- **Banda inferior**
+        
+Es el porcentaje mínimo en que la asignación de un Estado puede crecer o decrecer respecto al año anterior (2025).
+(Ej. Si se establece en 0%, ningún Estado puede recibir menos que el monto asignado en 2025).
+        
+- **Superávit y Déficit**
+        
+El sistema identifica los fondos excedentes de los Estados que superaron el límite superior (`supéravit`) y los fondos faltantes para aquellos que cayeron por debajo del límite inferior (`déficit`).
+
+
+<!---  slide 7 --->
+## {background-image="slides-2.png"}
+
+<br>
+
+- **Remanente**
+
+Los fondos excedentes se reúnen en un fondo común y, en primer lugar, se usan para cubrir los déficits.
+
+- **Proceso iterativo**
+        
+Dado que la asignación inicial puede provocar que algunos Estados queden por encima de la banda superior o por debajo de la banda inferior, la aplicación ejecutará un ciclo iterativo de reasignación.
+        
+El remanente se reparte proporcionalmente sólo entre aquellos Estados que no han sido "topados" por el límite superior.
+        
+Este proceso de topado, recolección y redistribución se repite varias veces (*iteración*) hasta que el remanente por repartir es insignificante.
+
+Este método asegura que el monto total del Fondo no se altere, y que todos los estados cumplan con los límites de variación definidos en la barra lateral, resultando en la `Asignación 2026 Final Ajustada`.
+
+
+<!---  slide 8 app iframe --->
+## Escenarios {background-image="slides-2.png"}
+
+<style>
+.slide-deck {
+    border: 2px solid #691c32;
+    width: 1500px;
+    height: 720px;
+}
+</style>
+
+<div>
+```{=html}
+<iframe class="slide-deck" data-external="1" src="https://jesuslm-sesnsp-fondos-app.share.connect.posit.cloud"></iframe>
+```
+</div>
+
+
+<!---  slide 9 annex with tabs --->
+## Anexo {background-image="slides-2.png"}
+
+#### Procedimiento para la Asignacion del Fondo
+
+::: {.panel-tabset}
+
+#### 1. Estandarización
+
+Primero, calculamos la proporción que representa cada Estado en cada variable:
+
+<br>
+
+- Proporción de Población (P<sub>i</sub>​):
+        
+$$P_{i}​​ = \frac{\text{Población del Estado i}}{\text{Población total}}$$
+
+- Proporción de Delitos (D<sub>i</sub>​​):
+        
+$$D_{i}​​ = \frac{\text{Delitos del Estado i}}{\text{Total de delitos}}$$
+
+
+#### 2. Factor de Asignación
+
+Luego, combina estas dos proporciones para cada estado (i) usando las ponderaciones (WP​=0.60 y WD​=0.40).
+
+<br>
+
+- Factor Ponderado (F<sub>i</sub>​​):
+
+$$F_{i}​​ = (P_{i}​ * 0.60) + (D_{i}​​ * 0.40)$$
+
+<br>
+
+El resultado $F_{i}​​$​ es el porcentaje total del fondo que le corresponde al Estado i. 
+
+<br>
+
+**Nota**: *La suma de todos los F<sub>i</sub> debe ser igual a 1.00 (100%).*
+
+
+#### 3. Asignación Final
+
+Finalmente, multiplica el Factor Ponderado por el Fondo Total (FT):
+
+<br>
+
+- Asignación al Estado i:
+        
+$$A_{i}​ = F_{i}​​​ * FT$$
+
+:::
+
+## {background-image="gracias.png"}

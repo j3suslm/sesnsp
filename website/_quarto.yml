@@ -1,0 +1,45 @@
+project:
+  type: website
+
+website:
+  title: "Estudios"
+  page-navigation: true
+  navbar:
+    search: true
+    background: "#691c32"
+    foreground: "#ffff"
+    left:
+      - sesnsp.qmd
+      - articulos.qmd
+      - staff.qmd
+      - glosario.qmd
+    right:
+      - icon: twitter
+        href: https://x.com/SESNSP
+  
+  sidebar:
+    collapse-level: 2
+    style: "docked"
+    border: false
+    logo-href: https://www.gob.mx/sesnsp
+    contents: 
+      - auto: estudios
+      - section: Aplicaciones
+        contents:
+          - text: Fondos Federales
+            href: https://jesuslm-sesnsp-fondos-app.share.connect.posit.cloud
+          - text: ENSU
+            href: https://jesuslm-sesnsp-ensu.share.connect.posit.cloud
+          - text: Tablero de indicadores
+            href: https://jesuslm-sesnsp-tablero.share.connect.posit.cloud
+
+  page-footer:
+    border: false
+    center: 
+    - text: "&#169; 2025 Dirección General de Planeación"
+
+format:
+  html:
+    lang: es
+    brand: _brand.yml
+    theme: styles.scss

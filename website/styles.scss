@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+/* css styles */
+h1, h2, h3 {
+    text-align: left;
+}
+
+#quarto-document-content {
+	text-align: justify;
+}
+
+.abstract p {
+  text-align: justify;
+}
+
+h3 {
+	color: #bc955c;
+}
+
+
+/*-- scss:rules --*/
+.goals {
+  margin: 1em 0;
+  border: 1px solid #98989a;
+  border-left: 10px solid #bc955c; 
+  border-radius: 5px;
+}
+
+.goals-header {
+  margin-left: 0em;
+  padding-left: 60px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: #bc955c;
+  border-top-right-radius: 5px;
+  font-size: 14pt;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.goals-container {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: #6f7271;
+  font-size: 11pt;
+  background-color: white;
+  border-bottom-right-radius: 5px;
+}

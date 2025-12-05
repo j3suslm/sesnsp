@@ -1,0 +1,181 @@
+---
+title: Fondos Federales
+subtitle: Seguridad Pública
+title-slide-attributes:
+  data-background-image: "slides-1.png"
+  data-background-size: cover
+  data-background-opacity: "0.9"
+date: 2025-11-12
+date-format: MMM, YYYY
+lang: en
+format:
+  revealjs:
+    view-distance: 10
+    auto-stretch: false
+    embed-resources: true
+    slide-number: c/t
+    footer: © Dirección General de Planeación
+    transition: fade
+    transition-speed: slow
+    theme: custom.scss
+    fig-cap-location: bottom
+execute:
+  echo: false
+jupyter: python3
+image: "sspc-sesnsp-small.png"
+categories: [Estudios]
+---
+
+## Introducción {background-image="slides-2.png"}
+<!---  slide 1 --->
+
+Los fondos federales son recursos que la Federación transfiere a estados y municipios para fines específicos, como seguridad pública y desarrollo municipal, buscando reducir las disparidades regionales.
+
+:::: {.columns}
+
+::: {.column width="55%"}
+![](fondos.png){.absolute top=200 left=0 width="850" height="500"}
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+
+Fondo de Aportaciones para la Seguridad Pública
+
+<br>
+<br>
+
+Fondo para el Fortalecimiento de las Instituciones de Seguridad Pública.
+
+<br>
+<br>
+
+Fondo de Aportaciones para el Fortalecimiento de los Municipios y de las Demarcaciones Territoriales del Distrito Federal
+:::
+
+::::
+
+
+<!---  slide 2 --->
+## FASP {background-image="slides-2.png"}
+
+- **Eficacia del gasto**
+  - Impacto del gasto en incidencia delictiva
+  - Mejoría en las capacidades institucionales
+- **Cumplimiento**
+  - Lineamientos
+  - Documentación comprobatoria
+- **Proyectos**
+  - ¿Atienden la problemática de seguridad pública?
+  - ¿Existe continuidad con proyectos de años anteriores?
+
+
+<!---  slide 3 --->
+## FOFISP {background-image="slides-2.png"}
+
+<br>
+
+![](fofisp.png){.absolute top=100 left=0 width="1000" height="650"}
+
+
+<!---  slide 4 --->
+## FORTAMUN {background-image="slides-2.png"}
+
+<br>
+
+- Porcentaje de gasto en seguridad pública por municipio
+- ¿Gasto operativo o gasto en inversión?
+- Impacto en mejoría de Policías Municipales
+
+
+<!---  slide 5 --->
+## Análisis transversal {background-image="slides-2.png"}
+
+<br>
+
+- Gasto por habitante y por tipo de delito de alto impacto
+- ¿Duplicidad de gasto entre fondos?
+- ¿Indicadores medibles?
+- Tasa de gasto vs tasa incidencia delictiva
+- Proporción de gasto operativo vs gasto en inversión
+- Relación de gasto en prestaciones sociales vs salarios por encima de conasami
+- Indice de percepción ciudadana vs gasto
+- Gasto operativo: *gasto administrativo vs gasto directo en ciudadanía*
+
+<!---  slide 6 --->
+## Análisis espacial {background-image="slides-2.png"}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+El **Cociente de Localización** (CL) permite comparar la proporción de una variable en un municipio respecto a la proporción de esa misma variable en una entidad federativa.
+
+- Mide la distribución geográfica desigual
+- Requiere una unidad de referencia regional
+- Identifica focos rojos de concentración 
+
+En resumen, el CL es una medida de la estructura espacial de un fenómeno y permite ir más allá de las tasas promedio para entender la realidad heterogénea y localizada de los problemas (incidencia delictiva) y las soluciones (gasto público en seguridad).
+
+:::
+
+::: {.column width="40%"}
+![](mapa.png)
+:::
+
+::::
+
+
+<!---  slide 7 --->
+## {background-image="slides-2.png"}
+
+<br>
+
+- **Modelo 1: CL para priorización del gasto en seguridad**
+
+Este modelo mide si el esfuerzo presupuestario en seguridad que hace un municipio es mayor o menor que el esfuerzo promedio del conjunto de municipios.
+
+$$CL_{M,S} = \frac{\frac{G_{M,I}}{G_{M,S}}}{\frac{G_{E,I}}{G_{E,S}}}$$
+
+Donde:
+
+$CL_{M,S}$​: Cociente de Localización del gasto en seguridad (S) para seguridad en el municipio M.
+
+$G_{M,S}$​: Gasto del municipio M en Seguridad.
+
+$G_{M,S}$​: Gasto total del fondo en el municipio M.
+
+$G_{R,I​}$: Gasto agregado de la entidad federativa en Seguridad.
+
+$G_{R,S}$​: Gasto total agregado del fondo en la entidad federativa.
+
+
+<!---  slide 8 --->
+## {background-image="slides-2.png"}
+
+<br>
+
+- **Modelo 2: CL para especialización en inversión estratégica**
+
+Este modelo permite identificar si un municipio se está especializando en la inversión de capital (ej. tecnología, infraestructura) en seguridad, en lugar de solo cubrir gastos operativos básicos (ej. salarios).
+
+$$CL_{M,I} = \frac{\frac{G_{M,I}}{G_{M,S}}}{\frac{G_{E,I}}{G_{E,S}}}$$
+
+Donde:
+
+$CL_{M,I}$​: Cociente de Localización de la Inversión de Capital (I) para seguridad en el municipio M.
+
+$G_{M,I}$​: Gasto del municipio M en Inversión de Capital para Seguridad.
+
+$G_{M,S}$​: Gasto total en Seguridad del municipio M.
+
+$G_{R,I​}$: Gasto agregado de la entidad federativa en Inversión de Capital para Seguridad.
+
+$G_{R,S}$​: Gasto total agregado en Seguridad de la entidad federativa.
+
+
+## {background-image="gracias.png"}

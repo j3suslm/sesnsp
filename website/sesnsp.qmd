@@ -1,0 +1,59 @@
+---
+title: "¿Quiénes somos?"
+lang: es
+fontsize: 12pt
+backgroundcolor: "#ffff"
+footnotes-hover: false
+theme: styles.scss
+---
+
+El **Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública** es un órgano administrativo desconcentrado de la *Secretaría de Seguridad y Protección Ciudadana*, con autonomía técnica, de gestión y presupuestal.[^1]
+
+El Secretariado Ejecutivo cuenta con las unidades administrativas siguientes:
+
+* Secretaría Ejecutiva Adjunta
+* Centro Nacional de Información
+* Centro Nacional de Prevención del Delito y Participación Ciudadana
+* Centro Nacional de Certificación y Acreditación
+* Dirección General de Vinculación y Seguimiento
+* Dirección General de Asuntos Jurídicos
+* Dirección General de Administración
+* **Dirección General de Planeación**
+* Dirección General de Apoyo Técnico
+* Dirección General de Coordinación Operativa
+* Dirección General del Registro Público Vehicular.
+
+
+La **Dirección General de Planeación** tiene las siguientes atribuciones:
+
+- Formular y proponer a la persona titular de la Secretaría Ejecutiva Adjunta los criterios, metodologías, indicadores y programas para la distribución de los Fondos de ayuda federal que serán sometidos para su aprobación al Consejo Nacional
+- Proponer y participar en la integración, conjuntamente con las unidades administrativas competentes del Secretariado Ejecutivo, de los indicadores aplicables a las políticas, programas, estrategias, protocolos, proyectos y acciones del Sistema, así como a los acuerdos y resoluciones del Consejo Nacional y convenios generales y específicos que se suscriban en materia de seguridad pública;
+- Participar con las autoridades competentes en el diseño y sistematización de instrumentos de información programática, presupuestal y financiera vinculados a los Fondos de ayuda federal
+- Proponer lineamientos, criterios, metodologías e indicadores para la evaluación de las políticas, programas, estrategias, protocolos, proyectos y acciones del Sistema, y coordinarse con las entidades federativas para el desarrollo de dicha evaluación, conforme a la Ley, los acuerdos y resoluciones del Consejo Nacional y los convenios generales y específicos suscritos en materia de seguridad pública
+- Colaborar con las autoridades competentes en la formulación de criterios que fortalezcan la rendición de cuentas, transparencia y supervisión del manejo de los recursos de los Fondos de ayuda federal
+- Realizar estudios sobre la operación y funcionamiento del Sistema, de las Instituciones de Seguridad Pública, del Secretariado Ejecutivo y de sus unidades administrativas, para identificar fortalezas, oportunidades, debilidades y amenazas con objeto de proponer acciones que contribuyan a mejorar su desempeño
+- Diseñar, ejecutar y evaluar el sistema de planeación del Secretariado Ejecutivo, así como proponer a la Dirección General de Administración las modificaciones a la estructura orgánica del Secretariado Ejecutivo
+- Coordinar la elaboración y actualización de los manuales de organización, de procedimientos y de servicios al público del Secretariado Ejecutivo, con la participación de sus unidades administrativas;
+- Evaluar la participación de las unidades administrativas del Secretariado Ejecutivo en las políticas, programas, estrategias, protocolos, servicios y acciones que lleven a cabo y, en su caso, proponer mejoras a sus procesos
+- Coordinar la innovación de procesos de calidad para mejorar el funcionamiento del Secretariado Ejecutivo en coordinación con las unidades administrativas competentes de la Secretaría;
+- Definir y aplicar métodos, técnicas y herramientas que permitan actualizar, fortalecer, consolidar y asegurar la congruencia de los procesos con las atribuciones y funciones con que cuenta cada unidad administrativa del Secretariado Ejecutivo
+- Coordinar la participación de las unidades administrativas del Secretariado Ejecutivo en la planeación de dicho órgano y realizar el seguimiento y evaluación de los asuntos de interés estratégico para medir su contribución a los programas del sector de seguridad pública.
+
+<!-- {{< video https://www.youtube.com/watch?v=2Gyn0YRpSsw width="450" height="250" >}} -->
+
+## Ubicación
+
+```{=html}
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.611792466129!2d-99.15813212447324!3d19.342644781917514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8acfc206d7b%3A0xf79896351b744d7!2sSecretariado%20Ejecutivo%20del%20Sistema%20Nacional%20de%20Seguridad%20P%C3%BAblica!5e0!3m2!1sen!2smx!4v1760118961828!5m2!1sen!2smx"
+height="400"
+width="500"
+frameborder="0"
+style="border:0;"
+allow="fullscreen"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+```
+
+[^1]: Reglamento del Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública.

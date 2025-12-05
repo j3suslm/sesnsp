@@ -1,0 +1,114 @@
+---
+title: Proyectos de Analítica
+title-slide-attributes:
+  data-background-image: slides-1.png
+  data-background-size: cover
+  data-background-opacity: "0.9"
+author: Jesús López M.
+date: '2025-09-19'
+date-format: MMM, YYYY
+lang: en
+format:
+  revealjs:
+    auto-stretch: false
+    embed-resources: true
+    view-distance: 10
+    slide-number: c/t
+    footer: © Dirección General de Planeación
+    transition: fade
+    transition-speed: slow
+    theme: custom.scss
+    fig-cap-location: bottom
+execute:
+  echo: false
+jupyter: python3
+image: "sspc-sesnsp-small.png"
+categories: [Estudios]
+---
+
+# Aplicación Fondos Federales {background-image="slides-2.png"}
+
+## Cálculo Distribución {background-image="slides-2.png"}
+
+::: {.panel-tabset}
+
+### Resumen
+
+Esta app permite calcular la distribución de recursos de los Fondos FASP, FOFISP y FORTAMUN.
+Cabe mencionar que, esta aplicación cuenta con un password para controlar el acceso al personal autorizado.
+
+### Vista previa
+
+<style>
+.slide-deck {
+    border: 2px solid #f8f8f8;
+    width: 700px;
+    height: 680px;
+}
+</style>
+
+<div>
+```{=html}
+<iframe class="slide-deck" data-external="1" src="https://jesuslm-sesnsp-fondos-app.share.connect.posit.cloud"></iframe>
+```
+</div>
+
+:::
+
+# ENSU {background-image="slides-2.png"}
+
+## Confianza en Policías Estatales {background-image="slides-2.png"}
+
+::: {.panel-tabset}
+
+### Resumen
+
+Esta app permite observar la evolución trimestral por Entidad Federativa y el comparativo por Entidad Federativa para un trimestre específico sobre la percepción de confianza en las Policías Estatales.
+
+### Vista previa
+
+<style>
+.slide-deck {
+    border: 2px solid #f8f8f8;
+    width: 950px;
+    height: 680px;
+}
+</style>
+
+<div>
+```{=html}
+<iframe class="slide-deck" data-external="1" src="https://jesuslm-sesnsp-ensu.share.connect.posit.cloud/"></iframe>
+```
+</div>
+
+:::
+
+# Sitio Web {background-image="slides-2.png"}
+
+## Blog de la Dirección General {background-image="slides-2.png"}
+
+::: {.panel-tabset}
+
+### Resumen
+
+Esta blog esta orientado a compartir la evaluación de políticas y otros artículos de interés.
+
+### Vista previa
+
+<style>
+.slide-deck {
+    border: 2px solid #f8f8f8;
+    width: 1400px;
+    height: 680px;
+}
+</style>
+
+<div>
+```{=html}
+<iframe class="slide-deck" data-external="1" src="https://j3sus.quarto.pub/sesnsp-blog"></iframe>
+```
+</div>
+
+:::
+
+# {background-image="gracias.png"}

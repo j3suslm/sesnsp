@@ -1,0 +1,485 @@
+[
+  {
+    "objectID": "glosario.html",
+    "href": "glosario.html",
+    "title": "Glosario",
+    "section": "",
+    "text": "Elaboró: Dirección General de Planeación\n\nFecha creación: Jul 07, 2025\n\nÚltima actualización: Jul 17, 2025\nEl presente glosario tiene como propósito establecer un conjunto de definiciones claras y compartidas que contribuyan a una comprensión común de la misión, funciones y responsabilidades del Secretariado Ejectuvo del Sistema Nacional de Seguridad Pública. Su objetivo es servir como una herramienta de referencia que fortalezca la coherencia técnica y conceptual en las labores cotidianas, y que permita al personal alinear sus actividades con los principios y objetivos institucionales.\nEste es un documento de carácter evolutivo. Será actualizado de forma periódica conforme se amplíen, transformen o especialicen las atribuciones y tareas de la insitución, a fin de mantener su vigencia y utilidad operativa.\nPara su elaboración, se realizó un análisis detallado de la normativa vigente, a partir del cual se identificaron los conceptos clave que estructuran el quehacer del Secretariado. Estas definiciones fueron complementadas con una revisión de literatura especializada, con el fin de brindar mayor claridad conceptual y subsanar vacíos interpretativos.\nCon ello, este glosario busca ser no solo un insumo técnico, sino también una herramienta de fortalecimiento institucional, orientada a mejorar la comunicación interna, apoyar la toma de decisiones e impulsar una implementación más eficaz de las funciones sustantivas del Secretariado."
+  },
+  {
+    "objectID": "glosario.html#footnotes",
+    "href": "glosario.html#footnotes",
+    "title": "Glosario",
+    "section": "Notas",
+    "text": "Notas\n\n\nMcGill, Ronald. “Institutional development: a review of the concept”, International Journal of Public Sector Management 8, no. 2, p. 66. Werlin, Herbert. “Understanding administrative bottlenecks”, Public Administration and Development 11, no. 3. p. 196.↩︎\nNorth, Douglass C. Institutions, Institutional change, and Economic Performance. Nueva York: Cambridge University Press. Traducción propia. North 1990, p. 3.↩︎\nBuyck, Beatrice. “The Bank’s use of technical assistance for institutional development” World Bank Working Paper, no. 578, Banco Mundial, Washington D.C., 1991, p. 5., p 30-31↩︎\nLey General del Sistema Nacional de Seguridad Pública (LGSNSP), (por publicar), Art. 60↩︎\nMigdal, J. S. (1988). Strong societies and weak states. State-society relations and state capabilities in the third world. Princeton University Press. United Nations Police. (2015). Guidelines on police capacity building and development. https://police.un.org/sites/default/files/sgf-guidelines_police_cbd-2015.pdf Mendoza y Padilla (2019). Organización policial y debilidad institucional: balance de las capacidades de las policías estatales. Revista de ciencias sociales y humanidades, vol.42 no.90.↩︎\nLGSNSP (por publicar) Art. 3, VIII↩︎\nLGSNSP (por publicar) Art. 4, IX.; Art. 49 Bonilla Alguera, G. S. (2023). Las policías como organizaciones institucionalizadas. Una aproximación a la implementación de reformas policiales [Tesis de doctorado]. CIDE. Alvarado Mendoza y Padilla (2019). Organización policial y debilidad institucional: balance de las capacidades de las policías estatales. Revista de ciencias sociales y humanidades, vol.42 no.90.↩︎\nLGSNSP (por publicar) Art. 4, VII↩︎\nLGSNSP (por publicar) Art. 3, XIV↩︎\nLGSNSP (por publicar) Art. 65, 66 y 67↩︎\nLGSNSP (por publicar) Art. 68 y 69↩︎\nLGSNSP (por publicar) Art. 70, 71 y 72 Casas, K., González, P., & Mesías, L. (2018, noviembre). Capítulo 2. Las policías latinoamericanas hoy (pp. 7–14). En La transformación policial para el 2030 en América Latina. Banco Interamericano de Desarrollo & Programa de Estado de Derecho Peter D. Bell del Diálogo Interamericano.↩︎\nLGSNSP (por publicar) Art. 4 y 125 Neid, Neild.“Controles Internos y Órganos Disciplinarios Policiales”, Temas y debates en la reforma de la seguridad pública, Washington Office on Latin America. Stone, Christopher E., and Heather H. Ward. 2000. “Democratic Policing: A Framework for Action.” Policing and Society 10 (1): 11–45. doi:10.1080/10439463.2000.9964829.↩︎\nLGSNSP (por publicar) Art. 75 ↩︎\nLGSNSP (por publicar) Art. 76↩︎\nLGSNSP (por publicar), Art. 84, 85, 86 y 87.↩︎\nNueva Ley General del Sistema Nacional de Seguridad Pública (por publicar) Arenas Valdés, R. (2023). El Control de Confianza y la Prueba Psicológica a los integrantes del Sistema Nacional de Seguridad Pública. En Revista Dilemas Contemporáneos: Educación, Política y Valores Volumen 3(78).↩︎\nLGSNSP (por publicar) Art. 81 PRP, págs. 37, 38, 59 y 60↩︎\nLGSNSP (por publicar) Art. 98 Amitabha Chatterjee, “Chapter V - Information Systems and Networks,” in Elements of Information Organization and Dissemination, ed. Amitabha Chatterjee (Oxford: Chandos Publishing, 2017), 353–426. https://doi.org/10.1016/B978-0-08-102025-8.00022-3.↩︎\nLGSNSP (por publicar) Art. 106, 107, 108, 109, 110↩︎"
+  },
+  {
+    "objectID": "estudios/fasp/index.html#componentes-del-folio-y-cómo-generarlos",
+    "href": "estudios/fasp/index.html#componentes-del-folio-y-cómo-generarlos",
+    "title": "Folio Encuesta Nacional",
+    "section": "Componentes del Folio y Cómo Generarlos",
+    "text": "Componentes del Folio y Cómo Generarlos\n\nIdentificador de la Encuesta Nacional\nID_ENCUESTA\nObjetivo\nDistinguir esta encuesta de otras que futuras o pasadas.\nGeneración\nUsar un código alfanumérico corto y significativo.\nEjemplo “Fondo de Aportaciones para la Seguridad Pública 2025”, -&gt; FASP25 o FASP_2025.\n\n\nCódigo de Entidad Federativa\nCOD_ENTIDAD\nObjetivo\nIdentificar de forma única cada uno de los 32 entidades federativas.\nGeneración\nUtilizar los códigos de Entidad Federativa del INEGI.\n\n\nCódigo de Municipio\nCOD_MUNICIPIO\nObjetivo\nIdentificar de forma única cada municipio dentro de su respectiva Entidad Federativa.\nGeneración\nUsar los códigos de Municipio del INEGI.\n\n\nNúmero Consecutivo\nNUM_CONSECUTIVO\nObjetivo\nProporciona un identificador único para cada formulario de encuesta dentro de un municipio específico.\nGeneración\nEste número debe reiniciarse para cada municipio. Es decir, en el municipio “A” se empieza 0001, 0002, etc., y cuando se pasa al municipio “B”, también se empieza 0001, 0002, etc.\n\n\nGestión del Consecutivo\nCada encuestador llevará un registro de números consecutivos asignado en el municipio donde recopile la información.\nFormato\nDependerá del volumen esperado de encuestas por municipio (0001 a 9999).",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Folio Encuesta Nacional"
+    ]
+  },
+  {
+    "objectID": "estudios/fasp/index.html#footnotes",
+    "href": "estudios/fasp/index.html#footnotes",
+    "title": "Folio Encuesta Nacional",
+    "section": "Notas",
+    "text": "Notas\n\n\nElaborado por Jesús López M. Subdirector de Área.↩︎",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Folio Encuesta Nacional"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#reporte-ejecutivo",
+    "href": "estudios/fondos_app_slides/index.html#reporte-ejecutivo",
+    "title": "Asignación del Fondo FASP",
+    "section": "Reporte Ejecutivo",
+    "text": "Reporte Ejecutivo\n\n\nIndicadores utilizados\nEl Fondo de Aportaciones para la Seguridad Pública (FASP) es un fondo presupuestal previsto en la Ley de Coordinación Fiscal a través del cual se transfieren recursos a las entidades federativas para dar cumplimiento a estrategias nacionales en materia de seguridad pública.\nEn la siguiente tabla, se listan los indicadores utilizados para la asignación de este fondo.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#cómo-funciona-esta-app",
+    "href": "estudios/fondos_app_slides/index.html#cómo-funciona-esta-app",
+    "title": "Asignación del Fondo FASP",
+    "section": "¿Cómo funciona esta app?",
+    "text": "¿Cómo funciona esta app?\n\n1. Objetivo\nEsta aplicación interactiva sirve como una herramienta de análisis de escenarios diseñada para simular la asignación de los recursos del Fondo de Aportaciones para la Seguridad Pública.\nSu propósito es permitir a los tomadores de decisiones visualizar cómo diferentes prioridades de política pública —expresadas a través de la asignación de ponderadores— impactan directamente en la cantidad de fondos que recibe cada Entidad Federativa.\nEsta herramienta permite destacar las siguientes características:\n\nTransparencia\n\nLa lógica de asignación es visible y ajustable.\n\nJustificación\n\nLas decisiones sobre la distribución de fondos se pueden respaldar con datos y escenarios explícitos.\n\nFacilidad de uso\n\nEl resultado final se recalcula automáticamente con cada ajuste hecho en la barra de ponderadores.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#section-1",
+    "href": "estudios/fondos_app_slides/index.html#section-1",
+    "title": "Asignación del Fondo FASP",
+    "section": "",
+    "text": "2. La fórmula\n\nÍndice ponderado\n\nLa aplicación utiliza un sistema llamado Índice de Proporciones Directas Ponderadas para determinar el reparto de la mayor parte del presupuesto (el 94% restante, después de restar el monto base).\n\nVariables\n\nSe utilizan 15 variables de desempeño y características estatales.\n\nNormalización (Medida de necesidad)\n\nPara cada variable, el desempeño de un Estado se compara con el desempeño de los demás.\n\nVariables “Buenas” (Alto = Más fondos)\n\nSi un Estado tiene un alto nivel en una variable deseada (ej. más Servicios Forenses), recibe una proporción mayor de los fondos de esa variable.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#section-2",
+    "href": "estudios/fondos_app_slides/index.html#section-2",
+    "title": "Asignación del Fondo FASP",
+    "section": "",
+    "text": "Variables “Malas” (Alto = Menos fondos)\n\nSi un Estado tiene un alto nivel en una variable no deseada (ej. más Sobrepoblación Penitenciaria), el modelo castiga ese valor, dándole una proporción menor de los fondos de esa variable.\n\nPonderación (Prioridad)\n\nCada una de estas 15 variables tiene un “peso” asignado en la barra lateral (sliders). Este peso es su herramienta de política pública. Si le da un peso de 0.50 a la Población, esa variable determinará la mitad del resultado. Si le da un peso de 0.01 a la Tasa Policial, esa variable tendrá un impacto marginal en el resultado.\n\nAsignación inicial\n\nEl monto de la asignación inicial de cada Estado es la suma de todas sus proporciones (medida de necesidad) multiplicadas por los pesos definidos (prioridades).",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#section-3",
+    "href": "estudios/fondos_app_slides/index.html#section-3",
+    "title": "Asignación del Fondo FASP",
+    "section": "",
+    "text": "3. El rebalanceo\n\nBandas de control\n\nUna vez que el modelo calcula la asignación inicial (Asignación 2026 inicial), ésta deberá pasar por un proceso de ajuste para cumplir con las bandas de control preestablecidas.\n\nBanda superior\n\nEs el porcentaje máximo en que la asignación de un Estado puede crecer respecto al año anterior (2025). (Ej. Si se establece en 10%, ningún Estado puede recibir más de un 10% adicional).\n\nBanda inferior\n\nEs el porcentaje mínimo en que la asignación de un Estado puede crecer o decrecer respecto al año anterior (2025). (Ej. Si se establece en 0%, ningún Estado puede recibir menos que el monto asignado en 2025).\n\nSuperávit y Déficit\n\nEl sistema identifica los fondos excedentes de los Estados que superaron el límite superior (supéravit) y los fondos faltantes para aquellos que cayeron por debajo del límite inferior (déficit).",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#section-4",
+    "href": "estudios/fondos_app_slides/index.html#section-4",
+    "title": "Asignación del Fondo FASP",
+    "section": "",
+    "text": "Remanente\n\nLos fondos excedentes se reúnen en un fondo común y, en primer lugar, se usan para cubrir los déficits.\n\nProceso iterativo\n\nDado que la asignación inicial puede provocar que algunos Estados queden por encima de la banda superior o por debajo de la banda inferior, la aplicación ejecutará un ciclo iterativo de reasignación.\nEl remanente se reparte proporcionalmente sólo entre aquellos Estados que no han sido “topados” por el límite superior.\nEste proceso de topado, recolección y redistribución se repite varias veces (iteración) hasta que el remanente por repartir es insignificante.\nEste método asegura que el monto total del Fondo no se altere, y que todos los estados cumplan con los límites de variación definidos en la barra lateral, resultando en la Asignación 2026 Final Ajustada.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#escenarios",
+    "href": "estudios/fondos_app_slides/index.html#escenarios",
+    "title": "Asignación del Fondo FASP",
+    "section": "Escenarios",
+    "text": "Escenarios",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_app_slides/index.html#anexo",
+    "href": "estudios/fondos_app_slides/index.html#anexo",
+    "title": "Asignación del Fondo FASP",
+    "section": "Anexo",
+    "text": "Anexo\nProcedimiento para la Asignacion del Fondo\n\n1. Estandarización2. Factor de Asignación3. Asignación Final\n\n\nPrimero, calculamos la proporción que representa cada Estado en cada variable:\n\n\nProporción de Población (Pi​):\n\n\\[P_{i}​​ = \\frac{\\text{Población del Estado i}}{\\text{Población total}}\\]\n\nProporción de Delitos (Di​​):\n\n\\[D_{i}​​ = \\frac{\\text{Delitos del Estado i}}{\\text{Total de delitos}}\\]\n\n\nLuego, combina estas dos proporciones para cada estado (i) usando las ponderaciones (WP​=0.60 y WD​=0.40).\n\n\nFactor Ponderado (Fi​​):\n\n\\[F_{i}​​ = (P_{i}​ * 0.60) + (D_{i}​​ * 0.40)\\]\n\nEl resultado \\(F_{i}​​\\)​ es el porcentaje total del fondo que le corresponde al Estado i.\n\nNota: La suma de todos los Fi debe ser igual a 1.00 (100%).\n\n\nFinalmente, multiplica el Factor Ponderado por el Fondo Total (FT):\n\n\nAsignación al Estado i:\n\n\\[A_{i}​ = F_{i}​​​ * FT\\]",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Asignación del Fondo FASP"
+    ]
+  },
+  {
+    "objectID": "estudios/apps_slides/index.html#cálculo-distribución",
+    "href": "estudios/apps_slides/index.html#cálculo-distribución",
+    "title": "Proyectos de Analítica",
+    "section": "Cálculo Distribución",
+    "text": "Cálculo Distribución\n\nResumenVista previa\n\n\nEsta app permite calcular la distribución de recursos de los Fondos FASP, FOFISP y FORTAMUN. Cabe mencionar que, esta aplicación cuenta con un password para controlar el acceso al personal autorizado.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Proyectos de Analítica"
+    ]
+  },
+  {
+    "objectID": "estudios/apps_slides/index.html#confianza-en-policías-estatales",
+    "href": "estudios/apps_slides/index.html#confianza-en-policías-estatales",
+    "title": "Proyectos de Analítica",
+    "section": "Confianza en Policías Estatales",
+    "text": "Confianza en Policías Estatales\n\nResumenVista previa\n\n\nEsta app permite observar la evolución trimestral por Entidad Federativa y el comparativo por Entidad Federativa para un trimestre específico sobre la percepción de confianza en las Policías Estatales.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Proyectos de Analítica"
+    ]
+  },
+  {
+    "objectID": "estudios/apps_slides/index.html#blog-de-la-dirección-general",
+    "href": "estudios/apps_slides/index.html#blog-de-la-dirección-general",
+    "title": "Proyectos de Analítica",
+    "section": "Blog de la Dirección General",
+    "text": "Blog de la Dirección General\n\nResumenVista previa\n\n\nEsta blog esta orientado a compartir la evaluación de políticas y otros artículos de interés.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Proyectos de Analítica"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun_informe2024/index.html#inversión-por-subprograma",
+    "href": "estudios/fortamun_informe2024/index.html#inversión-por-subprograma",
+    "title": "Informe FORTAMUN Ejercicio Fiscal 2024",
+    "section": "Inversión por subprograma",
+    "text": "Inversión por subprograma\nEl ejercicio de los recursos del FORTAMUN destinados a seguridad pública muestra una distribución diferenciada entre los subprogramas alineados a los Programas con Prioridad Nacional. El análisis del gasto reportado por los municipios evidencia que la mayor parte de los recursos se orientó a fortalecer condiciones laborales y capacidades institucionales. De acuerdo con los Informes de Conclusión, el subprograma con mayor monto ejercido fue “Mejora salarial, prestaciones y bonos por buen desempeño”, con una inversión de $7,741.95 millones de pesos. Le siguen “Fortalecimiento de las instituciones de seguridad pública y procuración de justicia” con $3,089.64 millones de pesos, e “Infraestructura y equipamiento de las instituciones de seguridad pública y procuración de justicia” con 536.82 millones de pesos.\n\n\n\n\n\n\n\n\nFigura 3: Inversión ejercida por subprograma con prioridad nacional\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInversión por subprograma con prioridad nacional\n\n\nImporte por entidad federativa\n\n\nId\nSubprograma\nImporte (mdp)\n\n\n\n\n10\nMEJORA SALARIAL, PRESTACIONES Y BONOS POR BUEN DESEMPEÑO\n$7,741.95\n\n\n6\nFORTALECIMIENTO DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n$3,089.64\n\n\n9\nINFRAESTRUCTURA Y EQUIPAMIENTO DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n$536.82\n\n\n7\nFORTALECIMIENTO DE LOS SISTEMAS DE VIDEOVIGILANCIA Y GEOLOCALIZACIÓN\n$382.94\n\n\n4\nEQUIPAMIENTO DEL PERSONAL DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n$366.11\n\n\n12\nRED NACIONAL DE RADIOCOMUNICACIÓN\n$260.31\n\n\n14\nSISTEMA NACIONAL DE ATENCIÓN DE LLAMADAS DE EMERGENCIAS Y DENUNCIAS CIUDADANAS\n$181.44\n\n\n3\nCAPACITACIÓN EN TODAS SUS MODALIDADES PARA EL MEJOR DESEMPEÑO DE LOS ELEMENTOS DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y DE PROCURACIÓNDE JUSTICIA CONFORME AL MODELO NACIONAL DE POLICÍA Y JUSITICA CÍVICA\n$147.70\n\n\n11\nPREVENCIÓN DE LA VIOLENCIA Y LA DELINCUENCIA, PROCESO GENERADOR DE PAZ Y PROCESO PARA LA ATENCIÓN DE LA DELINCUENCIA JUVENIL\n$126.63\n\n\n5\nFORTALECIMIENTO DE LAS CAPACIDADES DE EVALUACIÓN EN CONTROL DE CONFIANZA\n$48.59\n\n\n1\nBASES DE DATOS DEL SISTEMA NACIONAL DE SEGURIDAD PÚBLICA\n$37.11\n\n\n13\nSEGUIMIENTO A PROTOCOLOS DE ACTUACIÓN POLICIAL PARA MEJORAR EN DESEMPEÑO DEL PERSONAL DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n$35.60\n\n\n2\nCAPACITACIÓN CONTÍNUA PARA LA ATENCIÓN Y PREVENCIÓN DE LA VIOLENCIA DE GÉNERO\n$2.41\n\n\n8\nIMPULSO A LA MEJORÍA DEL CONTROL DE DESPACHO, SUPERVISIÓN Y SEGUIMIENTO DE DENUNCIAS CIUDADANAS\n$1.90\n\n\n\nFuente: Informes de conclusión FORTAMUN 2024\n\n\n\n\n\n\n\n        \n\n\n\n\n\nTabla 2: Inversión por subprograma con prioridad nacional\n\n\n\n\nEl comportamiento del gasto muestra una concentración clara en acciones relacionadas con remuneraciones y condiciones laborales, seguidas por la inversión en fortalecimiento institucional y equipamiento, mientras que los subprogramas de capacitación, prevención, videovigilancia o atención de llamadas de emergencia presentan montos menores. Este patrón sugiere que los municipios destinaron la mayor parte de sus recursos a atender necesidades estructurales y operativas inmediatas, principalmente asociadas a compromisos salariales y adquisición de equipo básico.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Informe FORTAMUN Ejercicio Fiscal 2024"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun_informe2024/index.html#adquisiciones-por-subprograma",
+    "href": "estudios/fortamun_informe2024/index.html#adquisiciones-por-subprograma",
+    "title": "Informe FORTAMUN Ejercicio Fiscal 2024",
+    "section": "Adquisiciones por subprograma",
+    "text": "Adquisiciones por subprograma\nLa siguiente gráfica muestra la distribución de las principales adquisiciones realizadas por los distintos subprogramas, destacando las partidas genéricas con mayor inversión. Se observa una clara concentración del gasto en acciones orientadas a la mejora salarial, el fortalecimiento institucional y el equipamiento estratégico para la seguridad pública.\nEl subprograma “Mejora salarial, prestaciones y bonos por buen desempeño” representa la mayor inversión, encabezado por la partida 113-Sueldos Base al Personal Permanente, que acumula más de $6.3 mil millones, constituyéndose como el rubro predominante dentro del Top 30. A este se suman partidas como Vestuario y Uniformes (271) y Estímulos (171), que contribuyen al bienestar y desempeño del personal.\n\n\n\n\n\n\n\n\nFigura 4: Top 30 partidas genéricas FORTAMUN\n\n\n\n\n\nPor otro lado, el subprograma “Fortalecimiento de las instituciones de seguridad pública y procuración de justicia” agrupa un número significativo de partidas, entre ellas Combustibles (261), Servicios de protección y seguridad (337) y Vehículos y equipo terrestre (541), reflejando la inversión destinada a la operatividad y movilidad de las corporaciones.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop 30 partidas genéricas FORTAMUN\n\n\nImporte por subprograma\n\n\nSubprograma\nClave\nPartida genérica\nImporte\n\n\n\n\nMejora salarial, prestaciones y bonos por buen desempeño\n113\nSueldos Base Al Personal Permanente\n$6,345,561,623.24\n\n\nMejora salarial, prestaciones y bonos por buen desempeño\n271\nVestuario y Uniformes\n$1,065,482,791.14\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n261\nCombustibles, lubricantes y aditivos\n$1,060,714,924.06\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n337\nServicios de protección y seguridad\n$758,925,366.76\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n541\nVehículos y equipo terrestre\n$425,904,312.78\n\n\nInfraestructura y equipamiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n541\nVehículos y equipo terrestre\n$328,037,971.79\n\n\nEquipamiento del personal de las Instituciones de Seguridad Pública y Procuración de Justicia\n271\nVestuario y Uniformes\n$265,547,732.43\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n355\nReparación y mantenimiento de equipo de transporte\n$248,084,298.40\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n211\nMateriales, útiles y equipos menores de oficina\n$198,974,026.13\n\n\nMejora salarial, prestaciones y bonos por buen desempeño\n171\nEstímulos\n$168,009,073.11\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n325\nArrendamiento de Equipo de Transporte\n$133,371,543.88\n\n\nRed Nacional de Radiocomunicación\n311\nEnergía eléctrica\n$119,622,936.57\n\n\nFortalecimiento de los Sistemas de Videovigilancia y Geolocalización\n565\nEquipo de comunicación y telecomunicación\n$108,486,236.16\n\n\nMejora salarial, prestaciones y bonos por buen desempeño\n159\nOtras Prestaciones Sociales Y Económicas\n$106,270,444.63\n\n\nFortalecimiento de los Sistemas de Videovigilancia y Geolocalización\n515\nEquipo de cómputo y de tecnologías de la información\n$88,598,149.58\n\n\nFortalecimiento de los Sistemas de Videovigilancia y Geolocalización\n597\nLicencias informáticas e intelectuales\n$82,552,410.52\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n296\nRefacciones y accesorios menores de equipo de transporte\n$75,387,071.82\n\n\nInfraestructura y equipamiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n325\nArrendamiento de Equipo de Transporte\n$64,922,778.28\n\n\nEquipamiento del personal de las Instituciones de Seguridad Pública y Procuración de Justicia\n283\nPrendas De Protección Para Seguridad Pública Y Nacional\n$61,208,681.20\n\n\nPrevención de la violencia y la delincuencia, proceso generador de paz y proceso para la atención de la delincuencia juvenil\n521\nEquipos y aparatos audiovisuales\n$57,402,556.69\n\n\nSistema Nacional de Atención de Llamadas de Emergencias y Denuncias Ciudadanas\n523\nCámaras Fotográficas y de video\n$57,228,020.00\n\n\nFortalecimiento de los Sistemas de Videovigilancia y Geolocalización\n566\nEquipos de generación eléctrica, aparatos y accesorios eléctricos\n$56,303,942.93\n\n\nCapacitación en todas sus modalidades para el mejor desempeño de los elementos de las Instituciones de Seguridad Pública y de Procuraciónde Justicia conforme al Modelo Nacional de Policía y Jusitica Cívica\n541\nVehículos y equipo terrestre\n$50,953,090.90\n\n\nRed Nacional de Radiocomunicación\n211\nMateriales, útiles y equipos menores de oficina\n$38,640,353.87\n\n\nRed Nacional de Radiocomunicación\n565\nEquipo de comunicación y telecomunicación\n$36,056,807.79\n\n\nSistema Nacional de Atención de Llamadas de Emergencias y Denuncias Ciudadanas\n345\nSeguro de bienes patrimoniales\n$35,484,040.53\n\n\nPrevención de la violencia y la delincuencia, proceso generador de paz y proceso para la atención de la delincuencia juvenil\n241\nProductos minerales no metálicos\n$34,281,173.68\n\n\nMejora salarial, prestaciones y bonos por buen desempeño\n511\nMuebles de oficina y estantería\n$33,305,704.68\n\n\nFortalecimiento de las Instituciones de Seguridad Pública y Procuración de Justicia\n597\nLicencias informáticas e intelectuales\n$33,212,390.33\n\n\nCapacitación en todas sus modalidades para el mejor desempeño de los elementos de las Instituciones de Seguridad Pública y de Procuraciónde Justicia conforme al Modelo Nacional de Policía y Jusitica Cívica\n211\nMateriales, útiles y equipos menores de oficina\n$32,871,886.19\n\n\n\nFuente: Informes de conclusión FORTAMUN 2024\n\n\n\n\n\n\n\n        \n\n\n\n\n\nTabla 3: Top 30 partidas genéricas FORTAMUN\n\n\n\n\nEn materia de tecnología y vigilancia, los subprogramas relacionados con Videovigilancia, Geolocalización y Radiocomunicación concentran recursos en rubros como Equipo de comunicación y telecomunicación (565), Equipo de cómputo (515), Licencias informáticas (597) y Energía eléctrica (311), evidenciando la apuesta por modernizar la infraestructura tecnológica.\nAsimismo, se destacan inversiones en equipamiento del personal, con partidas como Prendas de Protección (283) y Equipo audiovisual (521), necesarias para fortalecer capacidades operativas y preventivas.\nEn conjunto, estos datos reflejan una estrategia de inversión diversificada, donde los recursos se orientan tanto al capital humano, como al fortalecimiento operativo, tecnológico y de infraestructura, priorizando áreas clave para el funcionamiento y profesionalización de las instituciones de seguridad pública.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Informe FORTAMUN Ejercicio Fiscal 2024"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun_informe2024/index.html#beneficiados-por-subprograma",
+    "href": "estudios/fortamun_informe2024/index.html#beneficiados-por-subprograma",
+    "title": "Informe FORTAMUN Ejercicio Fiscal 2024",
+    "section": "Beneficiados por subprograma",
+    "text": "Beneficiados por subprograma\nLa información sobre beneficiarios permite observar un comportamiento distinto al de la distribución del gasto. La mayor inversión se orienta a la mejora salarial, el subprograma con mayor número de elementos beneficiados fue “Fortalecimiento de las instituciones de seguridad pública y procuración de justicia”, que concentró 5,591,638 beneficiarios. Le siguen “Red Nacional de Radiocomunicación”, con 2,218,859 personas beneficiadas, y “Fortalecimiento de los sistemas de videovigilancia y geolocalización”, con 1,932,388 beneficiarios. En contraste, subprogramas como “Impulso a la mejoría del control de despacho, supervisión y seguimiento de denuncias ciudadanas” reportaron cifras significativamente menores, como 3,024 personas beneficiadas.\n\n\n\n\n\n\n\n\nFigura 5: Elementos beneficiados por subprograma\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeneficiados por subprograma\n\n\nElementos beneficiados\n\n\nId\nSubprograma\nElementos beneficiados\n\n\n\n\n6\nFORTALECIMIENTO DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n4,618,868\n\n\n12\nRED NACIONAL DE RADIOCOMUNICACIÓN\n2,093,304\n\n\n9\nINFRAESTRUCTURA Y EQUIPAMIENTO DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n1,609,675\n\n\n7\nFORTALECIMIENTO DE LOS SISTEMAS DE VIDEOVIGILANCIA Y GEOLOCALIZACIÓN\n1,429,911\n\n\n11\nPREVENCIÓN DE LA VIOLENCIA Y LA DELINCUENCIA, PROCESO GENERADOR DE PAZ Y PROCESO PARA LA ATENCIÓN DE LA DELINCUENCIA JUVENIL\n1,273,967\n\n\n4\nEQUIPAMIENTO DEL PERSONAL DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n182,652\n\n\n14\nSISTEMA NACIONAL DE ATENCIÓN DE LLAMADAS DE EMERGENCIAS Y DENUNCIAS CIUDADANAS\n127,793\n\n\n10\nMEJORA SALARIAL, PRESTACIONES Y BONOS POR BUEN DESEMPEÑO\n57,840\n\n\n3\nCAPACITACIÓN EN TODAS SUS MODALIDADES PARA EL MEJOR DESEMPEÑO DE LOS ELEMENTOS DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y DE PROCURACIÓNDE JUSTICIA CONFORME AL MODELO NACIONAL DE POLICÍA Y JUSITICA CÍVICA\n34,259\n\n\n1\nBASES DE DATOS DEL SISTEMA NACIONAL DE SEGURIDAD PÚBLICA\n18,990\n\n\n5\nFORTALECIMIENTO DE LAS CAPACIDADES DE EVALUACIÓN EN CONTROL DE CONFIANZA\n18,685\n\n\n13\nSEGUIMIENTO A PROTOCOLOS DE ACTUACIÓN POLICIAL PARA MEJORAR EN DESEMPEÑO DEL PERSONAL DE LAS INSTITUCIONES DE SEGURIDAD PÚBLICA Y PROCURACIÓN DE JUSTICIA\n11,530\n\n\n8\nIMPULSO A LA MEJORÍA DEL CONTROL DE DESPACHO, SUPERVISIÓN Y SEGUIMIENTO DE DENUNCIAS CIUDADANAS\n567\n\n\n2\nCAPACITACIÓN CONTÍNUA PARA LA ATENCIÓN Y PREVENCIÓN DE LA VIOLENCIA DE GÉNERO\n526\n\n\n\nFuente: Informes de conclusión FORTAMUN 2024\n\n\n\n\n\n\n\n        \n\n\n\n\n\nTabla 4: Beneficiados por subprograma\n\n\n\n\nEs importante señalar que, si bien los Informes de Conclusión permiten conocer el número de beneficiados reportados por subprograma, no existe una metodología clara que explique cómo cada municipio calcula esta cifra ni qué representa exactamente. En algunos casos, el registro es consistente y directo, como cuando la adquisición de diez uniformes se traduce en diez elementos beneficiados. Sin embargo, en otros casos —especialmente en inversiones como litros de gasolina, mantenimiento de patrullas o servicios operativos— no es posible determinar si el número reportado corresponde al total de patrullas, al número de kilómetros recorridos, al personal a bordo, o a algún otro criterio interno de estimación. Esta falta de estandarización limita la interpretación precisa del alcance real de las acciones reportadas y subraya la necesidad de fortalecer las guías de reporte para futuros ejercicios.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Informe FORTAMUN Ejercicio Fiscal 2024"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun_informe2024/index.html#footnotes",
+    "href": "estudios/fortamun_informe2024/index.html#footnotes",
+    "title": "Informe FORTAMUN Ejercicio Fiscal 2024",
+    "section": "Notas",
+    "text": "Notas\n\n\nPágina oficial FORTAMUN↩︎\nAcuerdos y Exhortos del Consejo Nacional de Seguridad Pública↩︎",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Informe FORTAMUN Ejercicio Fiscal 2024"
+    ]
+  },
+  {
+    "objectID": "sesnsp.html",
+    "href": "sesnsp.html",
+    "title": "¿Quiénes somos?",
+    "section": "",
+    "text": "El Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública es un órgano administrativo desconcentrado de la Secretaría de Seguridad y Protección Ciudadana, con autonomía técnica, de gestión y presupuestal.1\nEl Secretariado Ejecutivo cuenta con las unidades administrativas siguientes:\nLa Dirección General de Planeación tiene las siguientes atribuciones:"
+  },
+  {
+    "objectID": "sesnsp.html#ubicación",
+    "href": "sesnsp.html#ubicación",
+    "title": "¿Quiénes somos?",
+    "section": "Ubicación",
+    "text": "Ubicación"
+  },
+  {
+    "objectID": "sesnsp.html#footnotes",
+    "href": "sesnsp.html#footnotes",
+    "title": "¿Quiénes somos?",
+    "section": "Notas",
+    "text": "Notas\n\n\nReglamento del Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública.↩︎"
+  },
+  {
+    "objectID": "articulos.html",
+    "href": "articulos.html",
+    "title": "Artículos",
+    "section": "",
+    "text": "En este apartado, compartimos artículos diversos de interés general sobre Seguridad Pública."
+  },
+  {
+    "objectID": "articulos.html#videos",
+    "href": "articulos.html#videos",
+    "title": "Artículos",
+    "section": "Videos",
+    "text": "Videos"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Estudios de Seguridad Pública",
+    "section": "",
+    "text": "Informe FORTAMUN Ejercicio Fiscal 2024\n\n\nInforme sobre el ejercicio de los recursos en materia de seguridad pública del Fondo de Aportaciones para el Fortalecimiento de los Municipios y de las Demarcaciones Territoriales del Distrito Federal\n\n\n\nEstudios\n\n\n\n\n\n\n\n\n\n3 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nFondos Federales\n\n\nSeguridad Pública\n\n\n\nEstudios\n\n\n\n\n\n\n\n\n\n12 nov 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAsignación del Fondo FASP\n\n\nEjercicio 2026\n\n\n\nEstudios\n\n\n\n\n\n\n\n\n\n30 oct 2025\n\n\n\n\n\n\n\n\n\n\n\n\nProyectos de Analítica\n\n\n\n\n\n\nEstudios\n\n\n\n\n\n\n\n\n\n19 sept 2025\n\n\nJesús López M.\n\n\n\n\n\n\n\n\n\n\n\n\nFortamun Mapa\n\n\nDistribución Geográfica de los Municipios Beneficiados - Fortamun 2025\n\n\n\nEstudios\n\n\n\nEn este post presentamos la distribución geográfica de los 247 municipios beneficados por Fortamun 2025.\n\n\n\n\n\n28 jul 2025\n\n\nSESNSP\n\n\n\n\n\n\n\n\n\n\n\n\nFolio Encuesta Nacional\n\n\nFondo de Aportaciones para la Seguridad Pública (FASP)\n\n\n\nNoticias\n\n\n\nLa creación un folio estructurado para una encuesta nacional subdividida por entidad federativa, municipio, y consecutivo es una buena práctica para la gestión y el análisis de datos.\n\n\n\n\n\n21 jul 2025\n\n\nSESNSP\n\n\n\n\n\n\n\n\n\n\n\n\nProgramas de Seguridad Pública\n\n\nFORTAMUN, FOFISP, FASP\n\n\n\nNoticias\n\n\n\nLa seguridad pública es una de las principales demandas y preocupaciones de la sociedad mexicana. Para hacer frente a este desafío complejo, el Estado mexicano ha implementado diversas estrategias y programas, muchos de los cuales se sustentan en una estructura de fondos federales destinados a fortalecer las capacidades de las entidades federativas y los municipios.\n\n\n\n\n\n18 jul 2025\n\n\nSESNSP\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "estudios/programas/index.html",
+    "href": "estudios/programas/index.html",
+    "title": "Programas de Seguridad Pública",
+    "section": "",
+    "text": "Entre los más relevantes se encuentran el Fondo de Aportaciones para el Fortalecimiento de los Municipios y de las Demarcaciones Territoriales del Distrito Federal (FORTAMUN), el Fondo para el Fortalecimiento de las Instituciones de Seguridad Pública (FOFISP) y el Fondo de Aportaciones para la Seguridad Pública (FASP). Estos recursos, si bien tienen objetivos y alcances distintos, convergen en el propósito de mejorar las condiciones de seguridad en todo el país.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Programas de Seguridad Pública"
+    ]
+  },
+  {
+    "objectID": "estudios/programas/index.html#fortamun-el-fortalecimiento-municipal-con-impacto-en-seguridad",
+    "href": "estudios/programas/index.html#fortamun-el-fortalecimiento-municipal-con-impacto-en-seguridad",
+    "title": "Programas de Seguridad Pública",
+    "section": "FORTAMUN: El Fortalecimiento Municipal con Impacto en Seguridad",
+    "text": "FORTAMUN: El Fortalecimiento Municipal con Impacto en Seguridad\nEl FORTAMUN es un fondo de aportaciones federales que se destina al fortalecimiento de las haciendas públicas municipales y de las demarcaciones territoriales de la Ciudad de México. Su objetivo primordial es que los municipios puedan satisfacer sus necesidades básicas, incluyendo servicios públicos y, de manera importante, la seguridad pública.\nAunque no es un fondo exclusivo para seguridad, una parte significativa de sus recursos puede ser (y a menudo es) canalizada para este fin. Los municipios pueden utilizar el FORTAMUN para la adquisición de equipamiento policial (vehículos, uniformes, armamento), la mejora de la infraestructura de seguridad (cárceles municipales, centros de mando), la capacitación y profesionalización de sus elementos, así como el pago de servicios relacionados con la función de seguridad. La flexibilidad del FORTAMUN permite a los gobiernos locales adaptar el uso de estos recursos a sus necesidades específicas en materia de seguridad, lo que lo convierte en una herramienta crucial para la prevención del delito y el mantenimiento del orden a nivel local.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Programas de Seguridad Pública"
+    ]
+  },
+  {
+    "objectID": "estudios/programas/index.html#fofisp-impulso-a-la-profesionalización-y-capacitación-policial",
+    "href": "estudios/programas/index.html#fofisp-impulso-a-la-profesionalización-y-capacitación-policial",
+    "title": "Programas de Seguridad Pública",
+    "section": "FOFISP: Impulso a la Profesionalización y Capacitación Policial",
+    "text": "FOFISP: Impulso a la Profesionalización y Capacitación Policial\nEl FOFISP, o Fondo para el Fortalecimiento de las Instituciones de Seguridad Pública, es un fondo más directamente enfocado en las corporaciones policiales. Su misión principal es el fortalecimiento de las instituciones de seguridad pública estatales y municipales. Esto se logra a través de acciones de certificación, profesionalización y equipamiento de los elementos policiales, así como el fortalecimiento tecnológico de equipo e infraestructura.\nLos recursos del FOFISP son fundamentales para elevar el nivel de las policías en México. Permiten invertir en programas de capacitación especializada, exámenes de control de confianza, equipamiento de vanguardia (desde sistemas de comunicación hasta tecnología para el análisis delictivo) y la modernización de las instalaciones policiales. Al mejorar las capacidades operativas y la profesionalización de los cuerpos de seguridad, el FOFISP contribuye directamente a una policía más efectiva, confiable y respetuosa de los derechos humanos.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Programas de Seguridad Pública"
+    ]
+  },
+  {
+    "objectID": "estudios/programas/index.html#fasp-estrategia-nacional-para-la-seguridad-pública",
+    "href": "estudios/programas/index.html#fasp-estrategia-nacional-para-la-seguridad-pública",
+    "title": "Programas de Seguridad Pública",
+    "section": "FASP: Estrategia Nacional para la Seguridad Pública",
+    "text": "FASP: Estrategia Nacional para la Seguridad Pública\nEl FASP, Fondo de Aportaciones para la Seguridad Pública de los Estados y del Distrito Federal, es quizás el instrumento financiero más directamente relacionado con la estrategia nacional de seguridad pública. Este fondo busca coadyuvar a los estados y a la Ciudad de México en el cumplimiento de las metas y acciones establecidas en los programas y estrategias nacionales de seguridad.\nLos recursos del FASP se destinan a una amplia gama de acciones estratégicas, incluyendo:\n\nDesarrollo, profesionalización y certificación policial: Al igual que el FOFISP, apoya la formación y evaluación de los policías.\nTecnologías, infraestructura y equipamiento: Inversión en sistemas de videovigilancia, equipos de comunicación, bases de datos y patrullas.\nImplementación del Sistema de Justicia Penal: Recursos para la capacitación de operadores, adecuación de infraestructura y desarrollo de herramientas para el nuevo sistema.\nFortalecimiento del sistema penitenciario: Mejora de las condiciones de internamiento y programas de reinserción social.\nPrevención del delito: Financiamiento de programas y proyectos dirigidos a reducir los factores de riesgo y vulnerabilidad.\nCombate a delitos de alto impacto: Fortalecimiento de capacidades para la investigación y persecución de crímenes de alto impacto.\n\nEl FASP es el pilar financiero para la implementación de políticas públicas en seguridad a nivel estatal, buscando homologar estándares y fortalecer la coordinación entre los diferentes órdenes de gobierno en la lucha contra la delincuencia.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Programas de Seguridad Pública"
+    ]
+  },
+  {
+    "objectID": "estudios/programas/index.html#desafíos-y-perspectivas",
+    "href": "estudios/programas/index.html#desafíos-y-perspectivas",
+    "title": "Programas de Seguridad Pública",
+    "section": "Desafíos y Perspectivas",
+    "text": "Desafíos y Perspectivas\nSi bien FORTAMUN, FOFISP y FASP representan un andamiaje financiero vital para la seguridad pública en México, su impacto efectivo depende de una gestión transparente y eficiente de los recursos. La rendición de cuentas, la evaluación de resultados y la correcta aplicación de los fondos son cruciales para que estos instrumentos cumplan su propósito.\nLa fragmentación de la delincuencia, la violencia persistente y la necesidad de adaptarse a nuevas modalidades delictivas exigen que estos fondos se utilicen de manera estratégica, priorizando las necesidades más apremiantes de cada región. La coordinación interinstitucional y la participación ciudadana también son elementos clave para maximizar el efecto de estas inversiones en la construcción de un entorno más seguro para todos los mexicanos.\nEn conclusión, FORTAMUN, FOFISP y FASP son componentes esenciales de la política de seguridad pública en México, proporcionando los recursos económicos necesarios para fortalecer las capacidades de los municipios y las entidades federativas. Su correcta aplicación y una evaluación constante de su impacto son fundamentales para avanzar hacia un país más seguro y con instituciones de seguridad más sólidas.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Programas de Seguridad Pública"
+    ]
+  },
+  {
+    "objectID": "estudios/programas/index.html#footnotes",
+    "href": "estudios/programas/index.html#footnotes",
+    "title": "Programas de Seguridad Pública",
+    "section": "Notas",
+    "text": "Notas\n\n\nElaborado por Jesús López M. Subdirector de Área.↩︎",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Programas de Seguridad Pública"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#introducción",
+    "href": "estudios/fondos_federales/index.html#introducción",
+    "title": "Fondos Federales",
+    "section": "Introducción",
+    "text": "Introducción\n\nLos fondos federales son recursos que la Federación transfiere a estados y municipios para fines específicos, como seguridad pública y desarrollo municipal, buscando reducir las disparidades regionales.\n\n\n\n\n \nFondo de Aportaciones para la Seguridad Pública\n \nFondo para el Fortalecimiento de las Instituciones de Seguridad Pública.\n \nFondo de Aportaciones para el Fortalecimiento de los Municipios y de las Demarcaciones Territoriales del Distrito Federal",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#fasp",
+    "href": "estudios/fondos_federales/index.html#fasp",
+    "title": "Fondos Federales",
+    "section": "FASP",
+    "text": "FASP\n\nEficacia del gasto\n\nImpacto del gasto en incidencia delictiva\nMejoría en las capacidades institucionales\n\nCumplimiento\n\nLineamientos\nDocumentación comprobatoria\n\nProyectos\n\n¿Atienden la problemática de seguridad pública?\n¿Existe continuidad con proyectos de años anteriores?",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#fofisp",
+    "href": "estudios/fondos_federales/index.html#fofisp",
+    "title": "Fondos Federales",
+    "section": "FOFISP",
+    "text": "FOFISP",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#fortamun",
+    "href": "estudios/fondos_federales/index.html#fortamun",
+    "title": "Fondos Federales",
+    "section": "FORTAMUN",
+    "text": "FORTAMUN\n\n\nPorcentaje de gasto en seguridad pública por municipio\n¿Gasto operativo o gasto en inversión?\nImpacto en mejoría de Policías Municipales",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#análisis-transversal",
+    "href": "estudios/fondos_federales/index.html#análisis-transversal",
+    "title": "Fondos Federales",
+    "section": "Análisis transversal",
+    "text": "Análisis transversal\n\n\nGasto por habitante y por tipo de delito de alto impacto\n¿Duplicidad de gasto entre fondos?\n¿Indicadores medibles?\nTasa de gasto vs tasa incidencia delictiva\nProporción de gasto operativo vs gasto en inversión\nRelación de gasto en prestaciones sociales vs salarios por encima de conasami\nIndice de percepción ciudadana vs gasto\nGasto operativo: gasto administrativo vs gasto directo en ciudadanía",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#análisis-espacial",
+    "href": "estudios/fondos_federales/index.html#análisis-espacial",
+    "title": "Fondos Federales",
+    "section": "Análisis espacial",
+    "text": "Análisis espacial\n\n\n\nEl Cociente de Localización (CL) permite comparar la proporción de una variable en un municipio respecto a la proporción de esa misma variable en una entidad federativa.\n\nMide la distribución geográfica desigual\nRequiere una unidad de referencia regional\nIdentifica focos rojos de concentración\n\nEn resumen, el CL es una medida de la estructura espacial de un fenómeno y permite ir más allá de las tasas promedio para entender la realidad heterogénea y localizada de los problemas (incidencia delictiva) y las soluciones (gasto público en seguridad).",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#section",
+    "href": "estudios/fondos_federales/index.html#section",
+    "title": "Fondos Federales",
+    "section": "",
+    "text": "Modelo 1: CL para priorización del gasto en seguridad\n\nEste modelo mide si el esfuerzo presupuestario en seguridad que hace un municipio es mayor o menor que el esfuerzo promedio del conjunto de municipios.\n\\[CL_{M,S} = \\frac{\\frac{G_{M,I}}{G_{M,S}}}{\\frac{G_{E,I}}{G_{E,S}}}\\]\nDonde:\n\\(CL_{M,S}\\)​: Cociente de Localización del gasto en seguridad (S) para seguridad en el municipio M.\n\\(G_{M,S}\\)​: Gasto del municipio M en Seguridad.\n\\(G_{M,S}\\)​: Gasto total del fondo en el municipio M.\n\\(G_{R,I​}\\): Gasto agregado de la entidad federativa en Seguridad.\n\\(G_{R,S}\\)​: Gasto total agregado del fondo en la entidad federativa.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fondos_federales/index.html#section-1",
+    "href": "estudios/fondos_federales/index.html#section-1",
+    "title": "Fondos Federales",
+    "section": "",
+    "text": "Modelo 2: CL para especialización en inversión estratégica\n\nEste modelo permite identificar si un municipio se está especializando en la inversión de capital (ej. tecnología, infraestructura) en seguridad, en lugar de solo cubrir gastos operativos básicos (ej. salarios).\n\\[CL_{M,I} = \\frac{\\frac{G_{M,I}}{G_{M,S}}}{\\frac{G_{E,I}}{G_{E,S}}}\\]\nDonde:\n\\(CL_{M,I}\\)​: Cociente de Localización de la Inversión de Capital (I) para seguridad en el municipio M.\n\\(G_{M,I}\\)​: Gasto del municipio M en Inversión de Capital para Seguridad.\n\\(G_{M,S}\\)​: Gasto total en Seguridad del municipio M.\n\\(G_{R,I​}\\): Gasto agregado de la entidad federativa en Inversión de Capital para Seguridad.\n\\(G_{R,S}\\)​: Gasto total agregado en Seguridad de la entidad federativa.",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fondos Federales"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun/index.html#distribución-geográfica-de-los-247-municipios-beneficiados",
+    "href": "estudios/fortamun/index.html#distribución-geográfica-de-los-247-municipios-beneficiados",
+    "title": "Fortamun Mapa",
+    "section": "Distribución Geográfica de los 247 Municipios Beneficiados",
+    "text": "Distribución Geográfica de los 247 Municipios Beneficiados\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fortamun Mapa"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun/index.html#distribución-de-municipios-beneficiados-por-entidad-federativa",
+    "href": "estudios/fortamun/index.html#distribución-de-municipios-beneficiados-por-entidad-federativa",
+    "title": "Fortamun Mapa",
+    "section": "Distribución de Municipios Beneficiados por Entidad Federativa",
+    "text": "Distribución de Municipios Beneficiados por Entidad Federativa",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fortamun Mapa"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun/index.html#distribución-porcentual-de-municipios-beneficiados-por-entidad-federativa",
+    "href": "estudios/fortamun/index.html#distribución-porcentual-de-municipios-beneficiados-por-entidad-federativa",
+    "title": "Fortamun Mapa",
+    "section": "Distribución Porcentual de Municipios Beneficiados por Entidad Federativa",
+    "text": "Distribución Porcentual de Municipios Beneficiados por Entidad Federativa",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fortamun Mapa"
+    ]
+  },
+  {
+    "objectID": "estudios/fortamun/index.html#footnotes",
+    "href": "estudios/fortamun/index.html#footnotes",
+    "title": "Fortamun Mapa",
+    "section": "Notas",
+    "text": "Notas\n\n\nElaborado por Jesús López M. Subdirector de Área.↩︎",
+    "crumbs": [
+      "¿Quiénes somos?",
+      "Estudios",
+      "Fortamun Mapa"
+    ]
+  },
+  {
+    "objectID": "staff.html",
+    "href": "staff.html",
+    "title": "Staff",
+    "section": "",
+    "text": "Equipo de la Dirección General de Planeación\n\n\n\n\n\n\nNombre\nCumpleaños\n\n\n\n\nMtra. Dulce\nFeb, 18\n\n\nMiriam\nFeb, 08\n\n\nGuadalupe\nFeb, 23\n\n\nOscar Uriel\nMar, 29\n\n\nPaola\nAbr, 23\n\n\nLaura Patricia\nMay, 14\n\n\nRocío Venus\nMay, 20\n\n\nUri\nJun, 12\n\n\nMaría Amparo\nJul, 07\n\n\nViridiana\nJul, 20\n\n\nSofia\nAgo, 01\n\n\nMa. Teresa\nAgo, 01\n\n\nDavid Humberto\nAgo, 09\n\n\nJesús\nAgo, 18\n\n\nClaudia\nAgo, 30\n\n\nArantxa\nSep, 14\n\n\nDaniela\nOct, 02\n\n\nFátima Fernanda\nOct, 05\n\n\nSilvia María del Socorro\nOct, 26\n\n\nIsis Abigail\nNov, 14\n\n\nPaulina\nNov, 22\n\n\nColumba\nNov, 22\n\n\nJorge Antonio\nDic, 01\n\n\nConsuelo\nDic, 06\n\n\nElisa\nDic, 15\n\n\nMiguel Antonio\nDic, 18"
+  }
+]

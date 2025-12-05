@@ -1,0 +1,60 @@
+meta:
+  name:
+    full: Secretariado Ejecutivo del Sistema Nacional de Seguridad Publica
+    short: SESNSP
+  link:
+    home: https://www.gob.mx/sesnsp
+    twitter: https://x.com/secretariadogem
+    facebook: https://www.facebook.com/pages/Secretariado-Ejecutivo-Del-Sistema-Nacional-De-Seguridad-Publica/285467058242575?locale=en_GB
+  description: |
+    Es un órgano administrativo desconcentrado de la Secretaría de Seguridad y Proteccion Ciudadana.
+    Su propósito principal es ejecutar y dar seguimiento a los acuerdos del Consejo Nacional de Seguridad Pública, que es la instancia superior de coordinación y de definición de las políticas públicas en materia de seguridad en el país.
+    En términos más concretos, algunas de las funciones del SESNSP incluyen:
+    - Recopilar, analizar y difundir información estadística sobre la incidencia delictiva y otros temas relacionados con la seguridad pública a nivel nacional.
+    - Administrar y operar bases de datos nacionales relevantes para la seguridad, como el Registro Nacional de Detenciones y el Registro Nacional de Armamento.
+    - Impulsar la homologación de la profesionalización de los cuerpos de seguridad pública en todo el país, incluyendo la capacitación y la evaluación de control de confianza.
+    - Coordinar la implementación de políticas y programas en materia de prevención del delito y participación ciudadana.
+    - Gestionar y distribuir recursos federales destinados al fortalecimiento de las instituciones de seguridad pública en los estados y municipios.
+    - Servir como secretaría técnica del Consejo Nacional de Seguridad Pública y de sus diferentes comisiones.
+  founded: 2018
+
+logo:
+  medium: sesnsp.png
+color:
+  palette:
+    white: "#FFFFFF"
+    black: "#242424"
+    red: "#691c32"
+    red2: "#9f2241"
+    golden: "#bc955c"
+    golden2: "#ddc9a3"
+    green: "#10312b"
+    green2: "#235b4e"
+    grey: "#6f7271"
+    grey2: "#98989a"
+  foreground: black
+  background: white
+  primary: red
+  secondary: golden
+  tertiary: green
+  success: green
+  info: green2
+  warning: golden2
+  danger: red2
+  light: white
+  dark: "#404041"
+
+typography:
+  fonts:
+    - family: "Noto Sans"
+      source: google
+  base:
+    family: "Noto Sans"
+    line-height: 1.25
+    size: 1rem
+  headings:
+    family: "Noto Sans"
+    color: primary
+    weight: 600
+  link:
+    color: golden

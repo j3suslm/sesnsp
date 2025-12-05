@@ -1,0 +1,114 @@
+---
+title: "Folio Encuesta Nacional"
+subtitle: "Fondo de Aportaciones para la Seguridad Pública (FASP)"
+abstract: La creación un folio estructurado para una encuesta nacional subdividida por entidad federativa, municipio, y consecutivo es una buena práctica para la gestión y el análisis de datos.^[Elaborado por Jesús López M. Subdirector de Área.]
+author: SESNSP
+date: 2025-07-21
+date-modified: last-modified
+date-format: medium
+execute:
+  echo: false
+jupyter: python3
+image: "encuesta.png"
+categories: [Noticias]
+---
+
+![](sspc-sesnsp-small.png){.lightbox}
+
+# Estructura Recomendada del Folio
+
+La estructura más común y eficiente para este tipo de requerimiento es concatenar códigos que representen cada nivel de subdivisión, más un número consecutivo.
+
+Ejemplo sugerido de formato:
+
+`[ID_ENCUESTA]-[COD_ENTIDAD]-[COD_MUNICIPIO]-[NUM_CONSECUTIVO]`
+
+Donde:
+
+- ID_ENCUESTA: Identificador único de la encuesta nacional.
+- COD_ENTIDAD: Código de la Entidad Federativa.
+- COD_MUNICIPIO: Código del Municipio.
+- NUM_CONSECUTIVO: Número consecutivo único para cada encuesta en un municipio específico.
+
+## Componentes del Folio y Cómo Generarlos
+
+### Identificador de la Encuesta Nacional
+
+`ID_ENCUESTA`
+
+**Objetivo**
+
+Distinguir esta encuesta de otras que futuras o pasadas.
+
+**Generación**
+
+Usar un código alfanumérico corto y significativo.
+
+*Ejemplo*
+"Fondo de Aportaciones para la Seguridad Pública 2025", -> FASP25 o FASP_2025.
+
+### Código de Entidad Federativa
+
+`COD_ENTIDAD`
+
+**Objetivo**
+
+Identificar de forma única cada uno de los 32 entidades federativas.
+
+**Generación**
+
+Utilizar los códigos de Entidad Federativa del INEGI.
+
+### Código de Municipio
+
+`COD_MUNICIPIO`
+
+**Objetivo**
+
+Identificar de forma única cada municipio dentro de su respectiva Entidad Federativa.
+
+**Generación**
+
+Usar los códigos de Municipio del INEGI.
+
+### Número Consecutivo
+
+`NUM_CONSECUTIVO`
+
+**Objetivo**
+
+Proporciona un identificador único para cada formulario de encuesta dentro de un municipio específico.
+
+**Generación**
+
+Este número debe reiniciarse para cada municipio. Es decir, en el municipio "A" se empieza 0001, 0002, etc., y cuando se pasa al municipio "B", también se empieza 0001, 0002, etc.
+
+### Gestión del Consecutivo
+
+Cada encuestador llevará un registro de números consecutivos asignado en el municipio donde recopile la información.
+
+**Formato**
+
+Dependerá del volumen esperado de encuestas por municipio (0001 a 9999).
+
+# Ejemplo de Folio Completo
+
+"Fondo de Aportaciones para la Seguridad Pública 2025" (FASP25), realizada en el estado de Jalisco (14), en el municipio de Guadalajara (039), y es la quinta encuesta en ese municipio.
+
+El folio sería: `FASP25-14-039-0005`
+
+### Caracteres Separadores:
+
+Usar guiones (-).
+
+### Listados de Códigos:
+
+Descargarlos del sitio web del INEGI.
+
+::: {#fig-form}
+
+![](formulario.png){fig-align='left'}
+
+Vista previa del formulario
+
+:::

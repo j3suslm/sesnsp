@@ -1,0 +1,50 @@
+---
+title: Staff
+lang: es
+backgroundcolor: "#ffff"
+footnotes-hover: false
+theme: styles.scss
+tbl-cap-location: bottom
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: 9pt
+      }
+    </style>
+---
+
+::: custom-small
+
+| Nombre | Cumpleaños |
+| --- | :---: |
+| Mtra. Dulce | Feb, 18 |
+| Miriam | Feb, 08 |
+| Guadalupe | Feb, 23 |
+| Oscar Uriel | Mar, 29 |
+| Paola | Abr, 23 |
+| Laura Patricia | May, 14 |
+| Rocío Venus | May, 20 |
+| Uri | Jun, 12 |
+| María Amparo | Jul, 07 |
+| Viridiana | Jul, 20 |
+| Sofia | Ago, 01 |
+| Ma. Teresa | Ago, 01 |
+| David Humberto | Ago, 09 |
+| Jesús | Ago, 18 |
+| Claudia | Ago, 30 |
+| Arantxa | Sep, 14 |
+| Daniela | Oct, 02 |
+| Fátima Fernanda | Oct, 05 |
+| Silvia María del Socorro | Oct, 26 |
+| Isis Abigail | Nov, 14 |
+| Paulina | Nov, 22 |
+| Columba | Nov, 22 |
+| Jorge Antonio | Dic, 01 |
+| Consuelo | Dic, 06 |
+| Elisa | Dic, 15 |
+| Miguel Antonio | Dic, 18 |
+
+: Equipo de la Dirección General de Planeación {.striped .hover tbl-colwidths="[65,35]"}
+
+:::

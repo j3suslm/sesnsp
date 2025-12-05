@@ -1,0 +1,120 @@
+---
+title: "Glosario"
+lang: es
+fontsize: 12pt
+backgroundcolor: "#ffff"
+footnotes-hover: false
+theme: styles.scss
+toc: true
+toc-title: Contenido
+toc-depth: 4
+toc-expand: true
+---
+
+:::{.goals}
+::::{.goals-container}
+* Elaboró: **Dirección General de Planeación**  
+* Fecha creación: **Jul 07, 2025**  
+* Última actualización: **Jul 17, 2025**
+::::
+:::
+
+El presente glosario tiene como propósito establecer un conjunto de definiciones claras y compartidas que contribuyan a una comprensión común de la misión, funciones y responsabilidades del Secretariado Ejectuvo del Sistema Nacional de Seguridad Pública. Su objetivo es servir como una herramienta de referencia que fortalezca la coherencia técnica y conceptual en las labores cotidianas, y que permita al personal alinear sus actividades con los principios y objetivos institucionales.
+
+Este es un documento de carácter evolutivo. Será actualizado de forma periódica conforme se amplíen, transformen o especialicen las atribuciones y tareas de la insitución, a fin de mantener su vigencia y utilidad operativa.
+
+Para su elaboración, se realizó un análisis detallado de la normativa vigente, a partir del cual se identificaron los conceptos clave que estructuran el quehacer del Secretariado. Estas definiciones fueron complementadas con una revisión de literatura especializada, con el fin de brindar mayor claridad conceptual y subsanar vacíos interpretativos.
+
+Con ello, este glosario busca ser no solo un insumo técnico, sino también una herramienta de fortalecimiento institucional, orientada a mejorar la comunicación interna, apoyar la toma de decisiones e impulsar una implementación más eficaz de las funciones sustantivas del Secretariado.
+
+### Desarrollo^[McGill, Ronald. “Institutional development: a review of the concept”, International Journal of Public Sector Management 8, no. 2, p. 66. Werlin, Herbert. “Understanding administrative bottlenecks”, Public Administration and Development 11, no. 3. p. 196.]
+
+El desarrollo es un proceso político y contextual, mediante el cual una sociedad identifica sus propias problemáticas, diseña soluciones localmente adecuadas y las ajusta de forma reiterativa, con base en sus propias prioridades y necesidades humanas. A diferencia de visiones desarrollistas previas que equiparaban desarrollo con modernización y transferencia externa de conocimientos, el enfoque actual lo entiende como un ejercicio de autodeterminación, en el que cada país traza su propio camino sin imposiciones externas, reconociendo la dimensión política, histórica y cultural de dicho proceso.
+
+### Instituciones^[North, Douglass C. Institutions, Institutional change, and Economic Performance. Nueva York: Cambridge University Press. Traducción propia. North 1990, p. 3.]
+
+La definición generalmente aceptada de instituciones la desarrolló Douglass North que las define como: “las reglas del juego en una sociedad o, de manera más formal, las restricciones creadas por los seres humanos que moldean la interacción humana”. Estas reglas pueden estar codificadas en leyes, reglamentos y procedimientos, o pueden ser prácticas sociales y culturales compartidas que se reproducen de manera informal.
+
+### Desarrollo Institucional^[Buyck, Beatrice. “The Bank’s use of technical assistance for institutional development” World Bank Working Paper, no. 578, Banco Mundial, Washington D.C., 1991, p. 5., p 30-31]
+
+El Banco Mundial define el desarrollo institucional como: “la creación o refuerzo de la capacidad de una organización para generar, distribuir y usar recursos humanos y financieros efectivamente para alcanzar objetivos de desarrollo”. 
+
+### Desarrollo de las Instituciones de Seguridad Pública^[Ley General del Sistema Nacional de Seguridad Pública (LGSNSP), (por publicar), Art. 60]
+
+El desarrollo de las Instituciones de Seguridad Pública es el “conjunto de procesos dirigidos a su fortalecimiento y eficiencia de forma sostenible, con la finalidad de que prevengan, investiguen y persigan los delitos de forma eficaz y que, de esta manera, cumplan con su misión de proteger a la ciudadanía y garantizar el Estado de Derecho”.
+
+### Capacidades Institucionales^[Migdal, J. S. (1988). Strong societies and weak states. State-society relations and state capabilities in the third world. Princeton University Press. United Nations Police. (2015). Guidelines on police capacity building and development. https://police.un.org/sites/default/files/sgf-guidelines_police_cbd-2015.pdf Mendoza y Padilla (2019).  Organización policial y debilidad institucional: balance de las capacidades de las policías estatales. Revista de ciencias sociales y humanidades, vol.42 no.90.]
+
+Las capacidades institucionales pueden entenderse como el conjunto de aptitudes, recursos, competencias y relaciones que permiten a una organización cumplir con su objetivo de manera efectiva, legítima y sostenible. No se limitan a los insumos disponibles (como presupuesto o personal), sino que incluyen la habilidad de traducir esos recursos en resultados tangibles, conforme a normas formales e informales, sistemas de incentivos y estructuras de gobernanza.
+
+### Instituciones de Seguridad Pública^[LGSNSP (por publicar) Art. 3, VIII]
+
+Las instituciones de seguridad pública abarcan “las Instituciones Policiales, incluida la Guardia Nacional, de procuración de justicia, penitenciarias y demás dependencias encargadas o que realizan fines de seguridad pública en los tres órdenes de gobierno”.
+
+### Instituciones policiales^[LGSNSP (por publicar) Art. 4, IX.; Art. 49 Bonilla Alguera, G. S. (2023). Las policías como organizaciones institucionalizadas. Una aproximación a la implementación de reformas policiales [Tesis de doctorado]. CIDE.  Alvarado Mendoza y Padilla (2019).  Organización policial y debilidad institucional: balance de las capacidades de las policías estatales. Revista de ciencias sociales y humanidades, vol.42 no.90.]
+
+Las instituciones policiales comprenden no solo a “los cuerpos de policía que realizan tareas de prevención, investigación, proximidad social, reacción, inteligencia, así como de vigilancia y custodia de los establecimientos penitenciarios, de detención preventiva o de centros de arraigos; y en general, todas las instituciones encargadas de la seguridad pública a nivel federal, local y municipal, que realicen funciones similares”. Sino también a las estructuras organizacionales que contienen los marcos normativos, rutinas internas, reglas informales, organización jerárquica, las capacidades administrativas y demás elementos que condicionan el funcionamiento de las policías como instituciones. 
+
+### Instituciones de procuración de justicia^[LGSNSP (por publicar) Art. 4, VII]
+
+Las instituciones de procuración de justicia son el “conjunto de las instituciones de la Federación y las entidades federativas que integran al Ministerio Público, los servicios periciales, las policías ministeriales y demás auxiliares de aquel”.  
+
+### Servicio Profesional de Carrera^[LGSNSP (por publicar) Art. 3, XIV]
+
+El Servicio Profesional de Carrera es como se le denomina al “sistema de carácter obligatorio y permanente, conforme al que se establecen los lineamientos que definen los procedimientos de reclutamiento, selección, ingreso, registro, profesionalización, certificación, permanencia, promoción, reconocimiento, Régimen Disciplinario, reingreso, así como la conclusión del servicio de las personas integrantes de las Instituciones de Seguridad Pública”.
+
+### Reclutamiento, selección e ingreso^[LGSNSP (por publicar) Art. 65, 66 y 67]
+
+El reclutamiento es el “proceso a cargo de las instituciones de Seguridad Pública, mediante el que, a través de convocatoria públicas , se busca y convoca a personas candidatas potencialmente calificadas para ocupar plazas vacantes dentro de estas”.
+La selección es el “proceso que consiste en elegir, de entre las personas aspirantes que hayan aprobado el reclutamiento, a quienes cubran el perfil y la formación requeridos para ingresar a las Instituciones de Seguridad Pública”.
+
+Y el ingreso es el término con el que se designa el “procedimiento de integración de las personas candidatas a la estructura institucional y tendrá verificativo al terminar la etapa de formación inicial o capacitación en las Academias o Institutos, el periodo de prácticas correspondientes y el cumplimiento de los requisitos previstos en la presente ley”.
+
+### Promociones de grado, condecoraciones y reconocimientos^[LGSNSP (por publicar) Art. 68 y 69]
+
+La promoción “es el acto mediante el que se otorga a las personas integrantes de las Instituciones de Seguridad, el grado o el rango inmediato superior al que ostenten, dentro del orden jerárquico previsto en las disposiciones legales aplicables”.
+De forma complementaria a la promoción existe el régimen de condecoraciones y reconocimientos, que es el “mecanismo por el que las Instituciones de Seguridad otorgan el reconocimiento a sus integrantes por actos de servicio meritorios o por su trayectoria ejemplar, para fomentar la calidad y efectividad en el desempeño del servicio, incrementar las posibilidades de promoción y desarrollo de sus integrantes, así como fortalecer su identidad institucional”.
+
+### Organización jerárquica en las instituciones de Seguridad Pública^[LGSNSP (por publicar) Art. 70, 71 y 72 Casas, K., González, P., & Mesías, L. (2018, noviembre). Capítulo 2. Las policías latinoamericanas hoy (pp. 7–14). En La transformación policial para el 2030 en América Latina. Banco Interamericano de Desarrollo & Programa de Estado de Derecho Peter D. Bell del Diálogo Interamericano.]
+
+La Organización jerárquica en las instituciones de Seguridad Pública es la estructura de autoridad indispensable con la que deben contar las Instituciones, que establece la cadena de mando entre las personas integrantes.  
+
+Asimismo, la organización jerárquica en las instituciones policiales se refiere a un modelo estructural centralizado y vertical, caracterizado por la concentración de funciones operativas, logísticas y administrativas bajo un mando único. Este tipo de organización agrupa todas las labores policiales, tanto de prevención como de investigación, dentro de una misma fuerza, subordinada a una cúpula institucional encabezada por un jefe de policía y conformada por un número reducido de altos oficiales. La toma de decisiones, la gestión de recursos y la dirección institucional se articulan desde esta estructura cerrada, que opera mediante cadenas de mando claramente definidas y con predominancia de personal uniformado en todos los niveles operativos.
+
+### Régimen Disciplinario^[LGSNSP (por publicar) Art. 4 y 125 Neid, Neild.“Controles Internos y Órganos Disciplinarios Policiales”, Temas y debates en la reforma de la seguridad pública, Washington Office on Latin America. Stone, Christopher E., and Heather H. Ward. 2000. “Democratic Policing: A Framework for Action.” Policing and Society 10 (1): 11–45. doi:10.1080/10439463.2000.9964829.]
+
+El Régimen Disciplinario es el “conjunto de normas, principios y procedimientos que regulan la conducta del personal de las Instituciones de Seguridad Pública, con el propósito de garantizar el cumplimiento de sus deberes, la observancia de los valores éticos y el respeto a los derechos humanos. Establece las faltas disciplinarias, las sanciones correspondientes, los correctivos disciplinarios y los mecanismos para su aplicación, asegurando el debido proceso y promoviendo la integridad, la transparencia y la confianza ciudadana en dichas instituciones”.
+
+Se fundamenta en el concepto de la disciplina, que “comprende el aprecio de sí mismo, la pulcritud, los buenos modales, el rechazo a los vicios, la puntualidad en el servicio, la exactitud en la obediencia, el escrupuloso respeto a las leyes y reglamentos, así como a los derechos humanos”. Su función es el de un sistema de control interno, o sea que regula y orienta las actividades cotidianas de la institución, trata casos de abuso, y puede colaborar en el análisis y transformación de procedimientos y sistemas administrativos y reguladores para refinar la capacidad policial, mejorar su desempeño y eficacia, y elevar su conducta ética.
+
+### Permanencia^[LGSNSP (por publicar) Art. 75 ]
+
+La permanencia es como se le denomina al “resultado del cumplimiento constante de los requisitos establecidos por la LGSNSP para continuar en el servicio activo de las Instituciones de Seguridad Pública”. 
+
+### Terminación del Servicio Profesional de Carrera^[LGSNSP (por publicar) Art. 76]
+
+La terminación “comprenderá las causas ordinarias y extraordinarias de separación del servicio profesional de carrera, así como los procedimientos y recursos de inconformidad a los que haya lugar, ajustándose a lo establecido por las leyes y disposiciones aplicables”.
+
+### Certificación y Acreditación^[LGSNSP (por publicar), Art. 84, 85, 86 y 87.]
+
+La certificación se da a nivel institucional e individual.  La certificación institucional de una Institución de Seguridad Pública “reflejará el nivel de cumplimiento de los estándares establecidos por el Secretariado Ejecutivo”. Mientras que la certificación individual es “el proceso por el que las personas integrantes de las Instituciones de Seguridad Pública se someten a las evaluaciones para comprobar conocimientos, habilidades, aptitudes y competencias, así como la aprobación de las evaluaciones de control de confianza para el correcto desempeño de sus labores conforme a los perfiles establecidos por el Secretariado Ejecutivo“.
+
+Por otro lado, la acreditación solo se otorga a nivel institucional y “habilitará a una Institución de Seguridad Pública a realizar evaluaciones en una determinada materia y a prestar servicios de certificación de personal, incluida la materia de control de confianza”.
+
+### Evaluaciones de Control de Confianza^[Nueva Ley General del Sistema Nacional de Seguridad Pública (por publicar) Arenas Valdés, R. (2023). El Control de Confianza y la Prueba Psicológica a los integrantes del Sistema Nacional de Seguridad Pública. En Revista Dilemas Contemporáneos: Educación, Política y Valores Volumen 3(78).]
+
+Las Evaluaciones de Control de Confianza son las pruebas efectuadas por los Centros de Evaluación y Control de Confianza, que tienen por objeto el certificar que una persona aspirante o integrante de las Instituciones de Seguridad Pública cuente con las habilidades, destrezas y actitudes para realizar sus funciones, y que carezca de los factores de riesgo que puedan impedir el correcto desempeño de estas. 
+
+### Profesionalización^[LGSNSP (por publicar) Art. 81 PRP, págs. 37, 38, 59 y 60]
+
+La profesionalización “es un proceso permanente y progresivo de formación, que se integra por las etapas de formación inicial, actualización, promoción, especialización y alta dirección, para desarrollar al máximo las competencias, capacidades y habilidades de las y los integrantes de las Instituciones de Seguridad Pública”.
+
+### Sistema Nacional de Información^[LGSNSP (por publicar) Art. 98 Amitabha Chatterjee, “Chapter V - Information Systems and Networks,” in Elements of Information Organization and Dissemination, ed. Amitabha Chatterjee (Oxford: Chandos Publishing, 2017), 353–426. https://doi.org/10.1016/B978-0-08-102025-8.00022-3.]
+
+El Sistema Nacional de Información es “un conjunto integrado, organizado y sistematizado de registros y bases de datos nacionales. Se compone por elementos metodológicos y procedimentales que permiten a las Instituciones de Seguridad Pública su consulta e interconexión para el desempeño de sus funciones”.
+
+### Centros de Control de Comando^[LGSNSP (por publicar) Art. 106, 107, 108, 109, 110]
+
+Un Centro de Control y Comando (C7ia, C5i, C4 o equivalente) es una instalación especializada donde se reciben, procesan, analizan y coordinan operaciones e información en tiempo real, con el objetivo de atender a la ciudadanía, la toma de decisiones operativas y estratégicas, principalmente en el ámbito de seguridad pública, protección civil y gestión de emergencias médicas.
+
+Estos centros integran las tecnologías de videovigilancia, identificación vehicular, análisis de datos y coordinación operativa destinadas a la coordinación y supervisión operativa en tiempo real de las actividades de prevención, vigilancia y atención de emergencias. Su función principal es centralizar el monitoreo de cámaras de videovigilancia, sistemas de comunicación y alertas ciudadanas, entre otras, permitiendo la toma de decisiones inmediata para responder a situaciones de riesgo o incidencia delictiva, así como mejorar la capacidad de reacción ante emergencias y apoyar la investigación criminal, a través de la centralización de información y la colaboración interinstitucional entre fuerzas policiales, instituciones de atención de emergencia y dependencias y entidades gubernamentales.

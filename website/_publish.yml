@@ -1,0 +1,14 @@
+- source: project
+  quarto-pub:
+    - id: d6b79727-0710-4152-9668-1caf3e13cdcd
+      url: https://j3sus.quarto.pub/sesnsp
+    - id: 1ed90ef3-8866-4f89-aeea-9662e6ffd9c1
+      url: https://j3sus.quarto.pub/sesnsp-blog
+    - id: 66040f0e-ae09-47aa-81a7-bf4261c244f0
+      url: https://j3sus.quarto.pub/sesnsp
+    - id: 15eb8ab0-918c-4188-8947-9073c078c6f0
+      url: https://j3sus.quarto.pub/sesnsp-website
+    - id: 5c5a7842-d688-498d-b749-b1e9e606e315
+      url: https://j3sus.quarto.pub/sesnsp
+    - id: e4f52668-6474-4119-8250-1d6e0d0be79d
+      url: https://j3sus.quarto.pub/sesnsp-page

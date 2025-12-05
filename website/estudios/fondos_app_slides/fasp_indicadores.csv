@@ -1,0 +1,16 @@
+﻿Categoría,Ponderación_categoría,Subcategoría,Indicador,Ponderación_subcategoría,Ponderación_indicador
+Características Estatales,0.3,Población,Población en la Entidad Federativa,0.5,0.15
+,,Carga Delictiva,Incidencia Delictiva,0.3,0.09
+,,Monto Base,Monto Base,0.2,0.06
+Desempeño institucional,0.45,Cumplimiento,Estado de Fuerza,0.2,0.09
+,,,Dignificación Salarial,0.15,0.0675
+,,,Instituciones de Profesionalización,0.15,0.0675
+,,,Aprobación en Control de Confianza,0.125,0.05625
+,,,Disponibilidad de Cámaras,0.125,0.05625
+,,,Disponibilidad de lectores de placas vehiculares,0.125,0.05625
+,,,Porcentaje de abandono de llamadas al 911 y 089,0.125,0.05625
+,0.05,Ejercicio de los Recursos,Cumplimiento presupuestal,1,0.05
+,0.2,Resultados,Sobrepoblación penitenciaria,0.25,0.05
+,,,Impartición de Justicia,0.25,0.05
+,,,Servicios Médicos Forenses,0.25,0.05
+,,,Eficiencia procesal,0.25,0.05
