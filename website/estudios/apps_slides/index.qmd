@@ -19,6 +19,8 @@ format:
     transition-speed: slow
     theme: custom.scss
     fig-cap-location: bottom
+    width: 1600
+    height: 900
 execute:
   echo: false
 jupyter: python3
