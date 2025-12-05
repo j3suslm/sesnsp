@@ -1,0 +1,15 @@
+numpy
+pandas
+polars
+plotnine
+plotly
+pathlib
+matplotlib
+seaborn
+plotly
+duckdb
+openpyxl
+fastexcel
+great_tables
+jupyter
+
