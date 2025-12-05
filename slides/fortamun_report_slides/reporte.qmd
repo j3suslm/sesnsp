@@ -1,0 +1,373 @@
+---
+title: Reporte Fortamun 2024
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-location: left
+    page-layout: full
+execute:
+  echo: false
+jupyter: python3
+---
+
+```{python}
+# libraries
+import numpy as np
+import pandas as pd
+import polars as pl
+from pathlib import Path
+import plotly.express as px
+import plotly.graph_objects as go
+
+# folders
+root = Path.cwd().parent.parent
+file = Path('data_lake/1-bronze/fortamun-2024.xlsx')
+
+# dataset
+df = (
+    pl.read_excel(root/file)
+        .with_columns(
+            (pl.col('Seg_pub')/1_000_000).round(4).alias('Seg_pub (mdp)')
+        )
+)
+
+df_diff = (
+    df
+        .select(pl.exclude('Municipio','Seg_pub%','Seg_pub (mdp)'))
+        .group_by(pl.col('Entidad Federativa')).agg((pl.all().sum()/1_000_000).round(4))
+        .with_columns(
+            (pl.col('Seg_pub')-pl.col('Meta_20%')).alias('Diferencia'),
+            ((pl.col('Seg_pub')/pl.col('Asignacion_2024')).round(4)*100).alias('Real%'),
+        )
+        .sort('Real%', descending=True)
+)
+```
+
+# Asignacion Fortamun
+
+```{python}
+asignacion = (
+    df.select(pl.exclude('Municipio','Meta_20%','Seg_pub','Seg_pub%'))
+        .group_by('Entidad Federativa').agg(pl.col('Asignacion_2024').sum())
+        .with_columns(
+            (pl.col('Asignacion_2024')/1_000_000).alias('Asignacion (mdp)')
+        )
+        .sort('Asignacion (mdp)', descending=True)
+)
+
+nacl = asignacion['Asignacion (mdp)'].mean()
+
+fig = px.bar(
+    asignacion,
+    x='Entidad Federativa',
+    y='Asignacion (mdp)',
+    )
+
+fig.add_hline(y=nacl, line_width=2, line_dash="dash", line_color="#691c32")
+
+fig.update_xaxes(tickangle = -45)
+
+fig.update_traces(
+    marker_color='#bc955c',
+    marker_line_color='#323232',
+    marker_line_width=1,
+    opacity=0.9,
+    )
+
+fig.update_layout(
+    xaxis_title='',
+    yaxis_title='Importe (mdp)',
+    yaxis_tickprefix='$',
+    yaxis_tickformat=',.2f',
+    width=900,
+    height=500,
+    plot_bgcolor='#f8f8f8',
+    paper_bgcolor='#f8f8f8',
+    font=dict(
+        family="Noto Sans",
+        size=14,
+        color="#323232",
+    )
+)
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=0.22,
+    text="Promedio nacional",
+    xref="paper",
+    xanchor="center",
+    x=0.9,
+    showarrow=False,
+    font=dict(size=13, color='#691c32')
+    )
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=-0.38,
+    text="Fuente: Secretariado Ejecutivo 2024",
+    xref="paper",
+    xanchor="center",
+    x=0.1,
+    showarrow=False,
+    font=dict(size=14)
+    )
+
+fig.show(renderer='iframe')
+```
+
+
+# Gasto en Seguridad Pública
+
+```{python}
+fig = px.bar(
+    df_diff,
+    x='Entidad Federativa',
+    y='Real%',
+    )
+
+fig.add_hline(y=20, line_width=2, line_dash="dash", line_color="#691c32")
+
+fig.update_xaxes(tickangle = -45)
+
+fig.update_yaxes(range=[0,100], ticksuffix="%")
+
+fig.update_traces(
+    marker_color='#bc955c',
+    marker_line_color='#323232',
+    marker_line_width=1,
+    opacity=0.9,
+    )
+
+fig.update_layout(
+    xaxis_title='',
+    yaxis_title="",
+    width=900,
+    height=500,
+    plot_bgcolor='#f8f8f8',
+    paper_bgcolor='#f8f8f8',
+    font=dict(
+        family="Noto Sans",
+        size=14,
+        color="#323232",
+    )
+)
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=0.2,
+    text="Objetivo del 20%",
+    xref="paper",
+    xanchor="center",
+    x=0.92,
+    showarrow=False,
+    font=dict(size=13, color='#691c32')
+    )
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=-0.38,
+    text="Fuente: Secretariado Ejecutivo 2024",
+    xref="paper",
+    xanchor="center",
+    x=0.1,
+    showarrow=False,
+    font=dict(size=14)
+    )
+
+fig.show(renderer='iframe')
+```
+
+# Gasto Efectuado vs Objetivo
+
+```{python}
+fig = go.Figure()
+
+fig.add_trace(
+    go.Scatter(
+        name='Efectuado',
+        line_color='#691c32',
+        line_width=3,
+        x=df_diff['Entidad Federativa'],
+        y=df_diff['Seg_pub'],
+    ))
+
+fig.add_trace(
+    go.Bar(
+        name='Objetivo',
+        x=df_diff['Entidad Federativa'],
+        y=df_diff['Meta_20%'],
+    ))
+
+fig.update_traces(
+    marker_color='#bc955c',
+    marker_line_color='#323232',
+    marker_line_width=1,
+    opacity=1,
+    )
+
+fig.update_xaxes(tickangle = -45)
+
+fig.update_layout(
+    title='',
+    xaxis_title='',
+    yaxis_title='Importe (mdp)',
+    yaxis_tickprefix='$',
+    yaxis_tickformat=',.2f',
+    width=900,
+    height=500,
+    plot_bgcolor='#f8f8f8',
+    paper_bgcolor='#f8f8f8',
+    font=dict(
+        family="Noto Sans",
+        size=14,
+        color="#323232",
+    ),
+    legend=dict(
+        orientation="h",
+        entrywidth=70,
+        yanchor="bottom",
+        y=0.8,
+        xanchor="right",
+        x=1
+    )
+)
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=-0.38,  # y = 1 is the top of the plot area
+    text="Fuente: Secretariado Ejecutivo 2024",
+    # Center the title horizontally over the plot area
+    xref="paper",
+    xanchor="center",
+    x=0.1,
+    showarrow=False,
+    font=dict(size=14)
+    )
+
+fig.show(renderer='iframe')
+```
+
+# Diagrama de Dispersión del Gasto
+
+```{python}
+fig = px.box(
+    df,
+    x='Entidad Federativa',
+    y='Seg_pub (mdp)',
+    points='outliers',
+    title=''
+)
+
+# Customize the layout of the plot (optional)
+fig.update_layout(
+    xaxis_title='',
+    yaxis_title='Importe (mdp)',
+    yaxis_tickprefix='$',
+    yaxis_tickformat=',.2f',
+    width=900,
+    height=500,
+    plot_bgcolor='#f8f8f8',
+    paper_bgcolor='#f8f8f8',
+    font=dict(
+        family="Noto Sans",
+        size=14,
+        color="#323232",
+    )
+)
+
+fig.update_xaxes(
+        tickangle = -45,
+    )
+    
+fig.update_traces(
+    marker_color='#9f2241',
+    # Optionally, you can also change the line color of the box and median line
+    line_color='#bc955c',
+    line_width=2
+)
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=-0.38,  # y = 1 is the top of the plot area
+    text="Fuente: Secretariado Ejecutivo 2024",
+    # Center the title horizontally over the plot area
+    xref="paper",
+    xanchor="center",
+    x=0.1,
+    showarrow=False,
+    font=dict(size=14)
+    )
+
+fig.show(renderer='iframe')
+```
+
+# Top 20 Municipios
+
+```{python}
+top20_municipios = (
+    df.with_columns(
+        (pl.col('Entidad Federativa') + ', ' + pl.col('Municipio')).alias('Nombre')
+        )
+        .select('Nombre','Seg_pub (mdp)').top_k(20, by='Seg_pub (mdp)')
+)
+
+fig = px.bar(
+    top20_municipios,
+    x='Nombre',
+    y='Seg_pub (mdp)',
+    )
+
+fig.update_xaxes(tickangle = -45)
+
+fig.update_traces(
+    marker_color='#bc955c',
+    marker_line_color='#323232',
+    marker_line_width=1,
+    opacity=0.9,
+    )
+
+fig.update_layout(
+    xaxis_title='',
+    yaxis_title='Importe (mdp)',
+    yaxis_tickprefix='$',
+    yaxis_tickformat=',.2f',
+    width=900,
+    height=500,
+    plot_bgcolor='#f8f8f8',
+    paper_bgcolor='#f8f8f8',
+    font=dict(
+        family="Noto Sans",
+        size=14,
+        color="#323232",
+    )
+)
+
+fig.add_annotation(
+    yref="paper",
+    yanchor="bottom",
+    y=-0.8,
+    text="Fuente: Secretariado Ejecutivo 2024",
+    xref="paper",
+    xanchor="center",
+    x=0.1,
+    showarrow=False,
+    font=dict(size=14)
+    )
+
+fig.show(renderer='iframe')
+```
+
+
+# Mapa
+
+```{=html}
+<iframe title="Gasto por Entidad Federativa" aria-label="Choropleth map" id="datawrapper-chart-05tvB" src="https://datawrapper.dwcdn.net/05tvB/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="516" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
+</script>
+```

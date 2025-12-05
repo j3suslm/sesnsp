@@ -1,0 +1,122 @@
+---
+title: Informe Fortamun 2024
+title-slide-attributes:
+  data-background-image: "../images/slideshows/portada.png"
+  data-background-size: cover
+  data-background-opacity: "0.9"
+date: 2025-09-19
+date-format: MMM, YYYY
+format:
+  revealjs:
+    view-distance: 10
+    auto-stretch: false
+    embed-resources: true
+    slide-number: c/t
+    width: 1600
+    height: 900
+    footer: © Dirección General de Planeación
+    transition: slide
+    transition-speed: slow
+    theme: custom.scss
+execute:
+  echo: false
+jupyter: python3
+---
+
+## Asignación Fortamun {background-image="../images/slideshows/principal-derecha.png"}
+
+
+```{=html}
+<iframe data-external="1" src="iframe_figures/figure_1.html" style="padding:30px;" width="2400px" height="800px"></iframe>
+```
+
+## New {background-image="../images/slideshows/principal-derecha.png"}
+
+![](iframe_figures/image.png){.absolute top=120 left=0 width="1200px" height="620px"}
+
+
+
+## Gasto en Seguridad Pública {background-image="../images/slideshows/principal-derecha.png"}
+
+::: {.panel-tabset}
+
+# Resumen
+
+En este gráfico podemos observar el comparativo del gasto en Seguridad Pública por Entidad Federativa versus el objetivo del 20%.
+
+# Gráfico
+
+```{=html}
+<iframe data-external="1" src="iframe_figures/figure_2.html" width="1000" height="600"></iframe>
+```
+
+:::
+
+
+## Gasto Efectuado vs Objetivo {background-image="../images/slideshows/principal-derecha.png"}
+
+::: {.panel-tabset}
+
+# Resumen
+
+En este gráfico podemos observar el comparativo del gasto en Seguridad Pública por Entidad Federativa versus el objetivo del 20%.
+
+# Gráfico
+
+```{=html}
+<iframe data-external="1" src="iframe_figures/figure_3.html" width="1000" height="600"></iframe>
+```
+
+:::
+
+
+## Dispersión del Gasto {background-image="../images/slideshows/principal-derecha.png"}
+
+::: {.panel-tabset}
+
+# Resumen
+
+En este gráfico podemos observar el comparativo del gasto en Seguridad Pública por Entidad Federativa versus el objetivo del 20%.
+
+# Gráfico
+
+```{=html}
+<iframe data-external="1" src="iframe_figures/figure_4.html" width="1000" height="600"></iframe>
+```
+
+:::
+
+
+## Top 20 Municipios {background-image="../images/slideshows/principal-derecha.png"}
+
+::: {.panel-tabset}
+
+# Resumen
+
+En este gráfico podemos observar el comparativo del gasto en Seguridad Pública por Entidad Federativa versus el objetivo del 20%.
+
+# Gráfico
+
+```{=html}
+<iframe data-external="1" src="iframe_figures/figure_5.html" width="1100" height="500"></iframe>
+```
+
+:::
+
+
+## Distribución Geográfica {background-image="../images/slideshows/principal-derecha.png"}
+
+::: {.panel-tabset}
+
+# Resumen
+
+En este gráfico podemos observar el comparativo del gasto en Seguridad Pública por Entidad Federativa versus el objetivo del 20%.
+
+# Gráfico
+
+```{=html}
+<iframe data-external="1" src="https://datawrapper.dwcdn.net/05tvB/2" width="1000" height="580"></iframe>
+```
+
+:::
+
